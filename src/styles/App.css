@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  word-wrap: break-word;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  line-height: 1.6;
+  /* Footer support */
+  position: relative;
+  min-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.6rem;
+}
+
+header {
+  font-size: 2.4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ------------------------------------------------ */
+/* Header styling */
+/* ------------------------------------------------ */
+
+.header-container {
+  height: 8rem;
+  background-color: #3b5998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-wrapper {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  max-width: 1800px;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1600px) {
+  .header-wrapper {
+    justify-content: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ------------------------------------------------ */
+/* Main Content styling */
+/* ------------------------------------------------ */
+
+.main-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1800px;
+  padding: 4rem 8rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 1600px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ------------------------------------------------ */
+/* CV Form styling */
+/* ------------------------------------------------ */
+
+.cv-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.cv-form {
+  width: 595px;
+}
+
+.cv-view {
+  padding: 50px;
+  width: 595px;
+  min-width: 595px;
+  height: 842px;
+  border-radius: 2px;
+  border: 1px solid black;
+  box-shadow: 5px 0 6px 0 hsl(0 0% 0% / 0.2);
+
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* ------------------------------------------------ */
+/* Footer styling */
+/* ------------------------------------------------ */
+
+.footer-container {
+  background-color: #424242;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
