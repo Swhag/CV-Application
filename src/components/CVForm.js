@@ -1,13 +1,19 @@
 import React from 'react';
 
 function CVForm(props) {
-  const { homework, ChangeHomework, tasks, ChangeTask, AddTask, DeleteTask } =
-    props;
+  const {
+    homework,
+    handleChangeHomework,
+    tasks,
+    handleChangeTask,
+    handleAddTask,
+    handleDeleteTask,
+  } = props;
 
   return (
     <div className='input-container'>
       <input
-        onChange={ChangeHomework}
+        onChange={handleChangeHomework}
         value={homework.text}
         type='text'
         name='homework'
@@ -17,7 +23,7 @@ function CVForm(props) {
       {tasks.map((task, i) => {
         return (
           <input
-            onChange={ChangeTask}
+            onChange={handleChangeTask}
             value={task.text}
             key={task.id}
             id={task.id}
@@ -28,8 +34,8 @@ function CVForm(props) {
         );
       })}
 
-      <button onClick={AddTask}>Add Task</button>
-      <button onClick={DeleteTask}>Delete Task</button>
+      <button onClick={handleAddTask}>Add Task</button>
+      <button onClick={handleDeleteTask}>Delete Task</button>
     </div>
   );
 }

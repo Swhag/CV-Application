@@ -61,25 +61,24 @@ class Main extends Component {
   };
 
   render() {
+    const { homework, tasks } = this.state;
     const {
-      homework,
       handleChangeHomework,
-      tasks,
       handleChangeTask,
       handleAddTask,
       handleDeleteTask,
-    } = this.state;
+    } = this;
 
     return (
       <div className='cv-container'>
         <div className='cv-form'>
           <CVForm
             homework={homework}
-            changeHomework={handleChangeHomework}
+            handleChangeHomework={handleChangeHomework}
             tasks={tasks}
-            ChangeTask={handleChangeTask}
-            AddTask={handleAddTask}
-            DeleteTask={handleDeleteTask}
+            handleChangeTask={handleChangeTask}
+            handleAddTask={handleAddTask}
+            handleDeleteTask={handleDeleteTask}
           ></CVForm>
         </div>
         <div className='cv-view'>
