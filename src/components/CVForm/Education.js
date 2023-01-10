@@ -59,15 +59,13 @@ function Education(props) {
               <button id={edu.id} onClick={handleDeleteEducation}>
                 Delete
               </button>
-              <button className='btn--add' onClick={handleAddEducation}>
+              <button className='btn-add' onClick={handleAddEducation}>
                 Add
               </button>
             </div>
           </div>
         );
       })}
-
-      <div>--------------------------------------------</div>
     </section>
   );
 }

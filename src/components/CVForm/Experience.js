@@ -58,12 +58,13 @@ function Experience(props) {
               <button id={exp.id} onClick={handleDeleteExperience}>
                 Delete
               </button>
-              <button onClick={handleAddExperience}>Add</button>
+              <button className='btn-add' onClick={handleAddExperience}>
+                Add
+              </button>
             </div>
           </div>
         );
       })}
-      <div>--------------------------------------------</div>
     </section>
   );
 }

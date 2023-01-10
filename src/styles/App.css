@@ -1,5 +1,10 @@
 body {
-  font-family: Segoe UI !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 #cv-form input,
@@ -18,40 +23,36 @@ body {
 }
 
 /* Styling */
-#cv-form form {
-  border: 2px solid var(--dark-green);
+#cv-form {
+  border: 2px solid #01579b;
   border-radius: 5px;
-  padding: 30px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
 }
 
 #cv-form h2 {
-  margin-bottom: 5px;
+  font-weight: 400;
+  color: #424242;
+  margin-bottom: 20px;
 }
 
-#cv-form label {
+#cv-form .group label {
   text-transform: capitalize;
   display: flex;
   flex-direction: column;
 }
 
-#cv-form input::placeholder {
+#cv-form .group input::placeholder {
   text-transform: capitalize;
 }
 
-#cv-form input,
-#cv-form textarea {
-  border: 1px solid #424242;
+#cv-form input {
+  border: 1px solid #757575;
   border-radius: 3px;
-  font-size: 1rem;
-  padding: 5px;
-}
-
-#cv-form textarea {
-  width: 100%;
-  resize: none;
+  font-size: 0.9rem;
+  padding: 10px;
 }
 
 #cv-form .group {
@@ -64,7 +65,7 @@ body {
   margin-bottom: 20px;
 }
 
-#cv-form .hidden {
+.hidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -78,10 +79,11 @@ body {
 #cv-form .btn-group {
   display: flex;
   gap: 8px;
+  margin-top: 10px;
 }
 
 #cv-form button {
-  color: var(--black);
+  color: #000;
   border: 1px solid #424242;
   padding: 4px 12px;
   border-radius: 5px;
@@ -90,7 +92,7 @@ body {
   transition: all 150ms;
 }
 
-#cv-form .btn-add {
+#cv-form .btn-group .btn-add {
   color: #3b5998;
 }
 
@@ -160,6 +162,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
+  padding: 40px;
 }
 
 .cv-form {
@@ -204,7 +207,7 @@ body {
 .footer-container {
   background-color: #424242;
   color: #fff;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   left: 0;
   display: flex;

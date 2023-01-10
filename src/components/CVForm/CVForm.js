@@ -18,13 +18,12 @@ function CVForm(props) {
   } = props;
 
   return (
-    <form id='cv-form'>
+    <div id='cv-form'>
       <Personal
         personalInfo={personalInfo}
         handleChangePersonal={handleChangePersonal}
       ></Personal>
 
-      <div>--------------------------------------------</div>
       <Education
         education={education}
         handleChangeEducation={handleChangeEducation}
@@ -38,7 +37,7 @@ function CVForm(props) {
         handleAddExperience={handleAddExperience}
         handleDeleteExperience={handleDeleteExperience}
       ></Experience>
-    </form>
+    </div>
   );
 }
 
