@@ -1,53 +1,74 @@
 import React from 'react';
 
 function Education(props) {
-  const { personalInfo, handleChangePersonal } = props;
+  const {
+    education,
+    handleChangeEducation,
+    handleAddEducation,
+    handleDeleteEducation,
+  } = props;
 
   return (
-    <div>
-      <input
-        onChange={handleChangePersonal}
-        value={personalInfo.name}
-        type='text'
-        name='name'
-        placeholder='Name'
-      />
-      <input
-        onChange={handleChangePersonal}
-        value={personalInfo.title}
-        type='text'
-        name='title'
-        placeholder='Title'
-      />
-      <input
-        onChange={handleChangePersonal}
-        value={personalInfo.phone}
-        type='text'
-        name='phone'
-        placeholder='Phone'
-      />
-      <input
-        onChange={handleChangePersonal}
-        value={personalInfo.email}
-        type='text'
-        name='email'
-        placeholder='Email'
-      />
-      <input
-        onChange={handleChangePersonal}
-        value={personalInfo.location}
-        type='text'
-        name='location'
-        placeholder='Location'
-      />
-      <input
-        onChange={handleChangePersonal}
-        value={personalInfo.description}
-        type='text'
-        name='description'
-        placeholder='Description'
-      />
-    </div>
+    <section>
+      <h2>Education</h2>
+      {education.map((edu, i) => {
+        return (
+          <div className='group' key={edu.id}>
+            <input
+              onChange={handleChangeEducation}
+              value={edu.university}
+              id={edu.id}
+              type='text'
+              name='university'
+              placeholder='University'
+            />
+            <input
+              onChange={handleChangeEducation}
+              value={edu.program}
+              id={edu.id}
+              type='text'
+              name='program'
+              placeholder='Program'
+            />
+            <input
+              onChange={handleChangeEducation}
+              value={edu.degree}
+              id={edu.id}
+              type='text'
+              name='degree'
+              placeholder='Degree'
+            />
+            <input
+              onChange={handleChangeEducation}
+              value={edu.startDate}
+              id={edu.id}
+              type='text'
+              name='startDate'
+              placeholder='Start Date'
+            />
+            <input
+              onChange={handleChangeEducation}
+              value={edu.endDate}
+              id={edu.id}
+              type='text'
+              name='endDate'
+              placeholder='End Date'
+            />
+
+            <div className='btn-group'>
+              <button id={edu.id} onClick={handleDeleteEducation}>
+                Delete
+              </button>
+              <button className='btn--add' onClick={handleAddEducation}>
+                Add
+              </button>
+            </div>
+          </div>
+        );
+      })}
+
+      <div>--------------------------------------------</div>
+    </section>
   );
 }
 

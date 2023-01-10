@@ -9,10 +9,11 @@ function Experience(props) {
   } = props;
 
   return (
-    <>
+    <section>
+      <h2>Work Experience</h2>
       {experience.map((exp, i) => {
         return (
-          <div key={exp.id}>
+          <div className='group' key={exp.id}>
             <input
               onChange={handleChangeExperience}
               value={exp.company}
@@ -35,7 +36,7 @@ function Experience(props) {
               id={exp.id}
               type='text'
               name='startDate'
-              placeholder='StartDate'
+              placeholder='Start Date'
             />
             <input
               onChange={handleChangeExperience}
@@ -43,7 +44,7 @@ function Experience(props) {
               id={exp.id}
               type='text'
               name='endDate'
-              placeholder='EndDate'
+              placeholder='End Date'
             />
             <input
               onChange={handleChangeExperience}
@@ -53,19 +54,17 @@ function Experience(props) {
               name='description'
               placeholder='Description'
             />
-            <button id={exp.id} onClick={handleDeleteExperience}>
-              Delete Experience
-            </button>
-            <div>--------------------------------------------</div>
+            <div className='btn-group'>
+              <button id={exp.id} onClick={handleDeleteExperience}>
+                Delete
+              </button>
+              <button onClick={handleAddExperience}>Add</button>
+            </div>
           </div>
         );
       })}
-
-      <div className='exp-button-container'>
-        <button onClick={handleAddExperience}>Add Experience</button>
-        {/* <button onClick={handleDeleteExperience}>Delete Experience</button> */}
-      </div>
-    </>
+      <div>--------------------------------------------</div>
+    </section>
   );
 }
 

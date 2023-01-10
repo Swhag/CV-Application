@@ -53,13 +53,18 @@ class Main extends Component {
     });
   };
 
-  handleDeleteEducation = () => {
-    let education = [...this.state.education];
+  handleDeleteEducation = (e) => {
+    const { id } = e.target;
+    let educationCopy = [...this.state.education];
 
-    education = education.slice(0, education.length - 1);
+    educationCopy.forEach((exp, index) => {
+      if (exp.id === id) {
+        educationCopy.splice(index, 1);
+      }
+    });
 
     this.setState({
-      education: [...education],
+      education: [...educationCopy],
     });
   };
 
@@ -110,9 +115,12 @@ class Main extends Component {
   // -------------------------------------------------------------------------
 
   render() {
-    const { personalInfo, experience } = this.state;
+    const { personalInfo, education, experience } = this.state;
     const {
       handleChangePersonal,
+      handleChangeEducation,
+      handleAddEducation,
+      handleDeleteEducation,
       handleChangeExperience,
       handleAddExperience,
       handleDeleteExperience,
@@ -124,6 +132,10 @@ class Main extends Component {
           <CVForm
             personalInfo={personalInfo}
             handleChangePersonal={handleChangePersonal}
+            education={education}
+            handleChangeEducation={handleChangeEducation}
+            handleAddEducation={handleAddEducation}
+            handleDeleteEducation={handleDeleteEducation}
             experience={experience}
             handleChangeExperience={handleChangeExperience}
             handleAddExperience={handleAddExperience}
@@ -133,6 +145,7 @@ class Main extends Component {
         <div className='cv-preview'>
           <CVPreview
             personalInfo={personalInfo}
+            education={education}
             experience={experience}
           ></CVPreview>
         </div>

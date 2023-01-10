@@ -1,59 +1,107 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  word-wrap: break-word;
-}
-
-html {
-  line-height: 1.6;
-  /* Footer support */
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.6rem;
+  font-family: Segoe UI !important;
 }
 
-header {
-  font-size: 2.4rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.2;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  width: 100%;
-}
-
-button,
-input,
-textarea {
-  border: none;
-  outline: none;
+#cv-form input,
+#cv-form textarea,
+#cv-form button {
+  font: inherit;
   color: inherit;
-  font-family: inherit;
-  font-size: inherit;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
 }
 
-button {
+#cv-form button {
   cursor: pointer;
 }
+
+/* Styling */
+#cv-form form {
+  border: 2px solid var(--dark-green);
+  border-radius: 5px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+#cv-form h2 {
+  margin-bottom: 5px;
+}
+
+#cv-form label {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+}
+
+#cv-form input::placeholder {
+  text-transform: capitalize;
+}
+
+#cv-form input,
+#cv-form textarea {
+  border: 1px solid #424242;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+#cv-form textarea {
+  width: 100%;
+  resize: none;
+}
+
+#cv-form .group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#cv-form .group:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+#cv-form .hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#cv-form .btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+#cv-form button {
+  color: var(--black);
+  border: 1px solid #424242;
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 150ms;
+}
+
+#cv-form .btn-add {
+  color: #3b5998;
+}
+
+#cv-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 3px 0 hsl(0 0% 0% / 0.1);
+}
+
+/* #cv-form .group:not(:last-child) button.btn-add {
+  display: none;
+} */
 
 /* ------------------------------------------------ */
 /* Header styling */
@@ -134,14 +182,16 @@ button {
 }
 
 /* ------------------------------------------------ */
-/* CV Form Input styling */
+/* CV Form Contact styling */
 /* ------------------------------------------------ */
 
-.exp-button-container {
-  margin-top: 10px;
-  display: flex;
-  gap: 10px;
-}
+/* ------------------------------------------------ */
+/* CV Form Experience styling */
+/* ------------------------------------------------ */
+
+/* ------------------------------------------------ */
+/* CV Form Input styling */
+/* ------------------------------------------------ */
 
 /* ------------------------------------------------ */
 /* CV Preview styling */
