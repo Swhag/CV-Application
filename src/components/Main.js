@@ -1,88 +1,140 @@
 import React, { Component, useRef } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-import CVForm from './CVForm';
-import CVPreview from './CVPreview';
+import CVForm from './CVForm/CVForm';
+import CVPreview from './CVPreview/CVPreview';
+
+import emptyCV from './utils/emptyCV';
 
 class Main extends Component {
   constructor() {
     super();
 
-    this.state = {
-      homework: {
-        text: '',
-        id: uuidv4(),
-      },
-
-      tasks: [],
-    };
+    this.state = emptyCV;
   }
 
-  handleChangeHomework = (e) => {
+  handleChangePersonal = (e) => {
+    const { name, value } = e.target;
+    let personalInfo = this.state.personalInfo;
+
+    personalInfo[name] = value;
+
     this.setState({
-      homework: {
-        text: e.target.value,
-        id: this.state.homework.id,
-      },
+      personalInfo: this.state.personalInfo,
     });
   };
 
-  handleChangeTask = (e) => {
-    const { id } = e.target;
-    let tasksCopy = [...this.state.tasks];
-    let task = tasksCopy.find((task) => task.id === id);
+  // -------------------------------------------------------------------------
 
-    task.text = e.target.value;
+  handleChangeEducation = (e) => {
+    const { id, name, value } = e.target;
+    let educationCopy = [...this.state.education];
+    let education = educationCopy.find((education) => education.id === id);
+
+    education[name] = value;
 
     this.setState({
-      tasks: [...tasksCopy],
+      education: [...educationCopy],
     });
   };
 
-  handleAddTask = () => {
-    const newTask = {
-      text: '',
+  handleAddEducation = () => {
+    const newEducation = {
       id: uuidv4(),
+      university: '',
+      program: '',
+      degree: '',
+      startDate: '',
+      endDate: '',
     };
 
     this.setState({
-      tasks: [...this.state.tasks, newTask],
+      education: [...this.state.education, newEducation],
     });
   };
 
-  handleDeleteTask = () => {
-    let tasks = [...this.state.tasks];
+  handleDeleteEducation = () => {
+    let education = [...this.state.education];
 
-    tasks = tasks.slice(0, tasks.length - 1);
+    education = education.slice(0, education.length - 1);
 
     this.setState({
-      tasks: [...tasks],
+      education: [...education],
     });
   };
 
+  // -------------------------------------------------------------------------
+
+  handleChangeExperience = (e) => {
+    const { id, name, value } = e.target;
+    let experienceCopy = [...this.state.experience];
+    let experience = experienceCopy.find((experience) => experience.id === id);
+
+    experience[name] = value;
+
+    this.setState({
+      experience: [...experienceCopy],
+    });
+  };
+
+  handleAddExperience = () => {
+    const newExperience = {
+      id: uuidv4(),
+      company: '',
+      position: '',
+      startDate: '',
+      endDate: '',
+      description: '',
+    };
+
+    this.setState({
+      experience: [...this.state.experience, newExperience],
+    });
+  };
+
+  handleDeleteExperience = (e) => {
+    const { id } = e.target;
+    let experienceCopy = [...this.state.experience];
+
+    experienceCopy.forEach((exp, index) => {
+      if (exp.id === id) {
+        experienceCopy.splice(index, 1);
+      }
+    });
+
+    this.setState({
+      experience: [...experienceCopy],
+    });
+  };
+
+  // -------------------------------------------------------------------------
+
   render() {
-    const { homework, tasks } = this.state;
+    const { personalInfo, experience } = this.state;
     const {
-      handleChangeHomework,
-      handleChangeTask,
-      handleAddTask,
-      handleDeleteTask,
+      handleChangePersonal,
+      handleChangeExperience,
+      handleAddExperience,
+      handleDeleteExperience,
     } = this;
 
     return (
       <div className='cv-container'>
         <div className='cv-form'>
           <CVForm
-            homework={homework}
-            handleChangeHomework={handleChangeHomework}
-            tasks={tasks}
-            handleChangeTask={handleChangeTask}
-            handleAddTask={handleAddTask}
-            handleDeleteTask={handleDeleteTask}
+            personalInfo={personalInfo}
+            handleChangePersonal={handleChangePersonal}
+            experience={experience}
+            handleChangeExperience={handleChangeExperience}
+            handleAddExperience={handleAddExperience}
+            handleDeleteExperience={handleDeleteExperience}
           ></CVForm>
         </div>
-        <div className='cv-view'>
-          <CVPreview homework={homework} tasks={tasks}></CVPreview>
+        <div className='cv-preview'>
+          <CVPreview
+            personalInfo={personalInfo}
+            experience={experience}
+          ></CVPreview>
         </div>
       </div>
     );
