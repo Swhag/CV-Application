@@ -44,8 +44,8 @@ class Main extends Component {
       university: '',
       program: '',
       degree: '',
-      startDate: '',
-      endDate: '',
+      graduationDate: '',
+      gpa: '',
     };
 
     this.setState({

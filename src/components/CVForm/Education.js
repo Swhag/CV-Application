@@ -40,19 +40,19 @@ function Education(props) {
             />
             <input
               onChange={handleChangeEducation}
-              value={edu.startDate}
+              value={edu.graduationDate}
               id={edu.id}
               type='text'
-              name='startDate'
-              placeholder='Start Date'
+              name='graduationDate'
+              placeholder='Graduation Date'
             />
             <input
               onChange={handleChangeEducation}
-              value={edu.endDate}
+              value={edu.gpa}
               id={edu.id}
               type='text'
-              name='endDate'
-              placeholder='End Date'
+              name='gpa'
+              placeholder='GPA'
             />
 
             <div className='btn-group'>

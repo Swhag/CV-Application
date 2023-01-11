@@ -4,22 +4,25 @@ function Education(props) {
   const { education } = props;
 
   return (
-    <div className='experience-list'>
+    <div className='education-list'>
       <h3>EDUCATION</h3>
 
       {education.map((edu, i) => {
         return (
-          <div className='experience' key={edu.id}>
-            <div className='experience-heading'>
+          <div className='education' key={edu.id}>
+            <div className='education-heading'>
               <h4>{edu.university}</h4>
-              <div className='experience-details'>
-                {edu.program} |
-                <span className='bold'>
-                  {edu.startDate} – {edu.endDate}
-                </span>
+              <div className='education-details'>
+                <span className='bold'>{edu.graduationDate}</span>
               </div>
             </div>
-            {edu.degree}
+            <div>{edu.program}</div>
+            <div className='education-heading'>
+              <div>{edu.degree}</div>
+              <div className='education-details'>
+                <span className='bold'>{edu.gpa}</span>
+              </div>
+            </div>
           </div>
         );
       })}

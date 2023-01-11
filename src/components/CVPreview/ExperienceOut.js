@@ -11,9 +11,9 @@ function ExperienceOut(props) {
         return (
           <div className='experience' key={exp.id}>
             <div className='experience-heading'>
-              <h4>{exp.position}</h4>
+              <h4>{exp.company}</h4>
               <div className='experience-details'>
-                {exp.company} |
+                {exp.position}|
                 <span className='bold'>
                   {exp.startDate} – {exp.endDate}
                 </span>

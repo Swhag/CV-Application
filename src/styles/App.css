@@ -292,6 +292,56 @@ h4,
 }
 
 /* ------------------------------------------------ */
+/* CV Preview (Output) Education styling */
+/* ------------------------------------------------ */
+
+#cv-preview .education-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+#cv-preview .education-list h3 {
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+#cv-preview .education {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+#cv-preview .education-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cv-preview .education-details,
+h4,
+.education-details {
+  color: var(--grey);
+}
+
+#cv-preview .education-details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+#cv-preview .education-list .bold {
+  font-weight: 600;
+}
+
+/* ------------------------------------------------ */
 /* Footer styling */
 /* ------------------------------------------------ */
 

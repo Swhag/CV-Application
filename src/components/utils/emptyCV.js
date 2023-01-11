@@ -16,8 +16,8 @@ const emptyCV = {
       university: '',
       program: '',
       degree: '',
-      startDate: '',
-      endDate: '',
+      graduationDate: '',
+      gpa: '',
     },
   ],
 
