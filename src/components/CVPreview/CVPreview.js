@@ -7,13 +7,9 @@ function CVPreview(props) {
   const { personalInfo, education, experience } = props;
 
   return (
-    <div>
+    <div id='cv-preview'>
       <PersonalOut personalInfo={personalInfo}></PersonalOut>
-
-      <div>--------------------------------------------</div>
-
       <EducationOut education={education}></EducationOut>
-
       <ExperienceOut experience={experience}></ExperienceOut>
     </div>
   );

@@ -4,26 +4,28 @@ function PersonalOutput(props) {
   const { personalInfo } = props;
 
   return (
-    <ul>
-      <li>
-        <div className='text-output'>{personalInfo.name}</div>
-      </li>
-      <li>
-        <div className='text-output'>{personalInfo.title}</div>
-      </li>
-      <li>
-        <div className='text-output'>{personalInfo.phone}</div>
-      </li>
-      <li>
-        <div className='text-output'>{personalInfo.email}</div>
-      </li>
-      <li>
-        <div className='text-output'>{personalInfo.location}</div>
-      </li>
-      <li>
-        <div className='text-output'>{personalInfo.description}</div>
-      </li>
-    </ul>
+    <>
+      <header>
+        <div className='heading'>
+          <h1>{personalInfo.name}</h1>
+          <h2>{personalInfo.title}</h2>
+        </div>
+        <div className='details-group'>
+          <div className='contact-details'>
+            <i class='fa-solid fa-phone'></i>
+            <span className='details-text'>{personalInfo.phone}</span>
+          </div>
+          <div className='contact-details'>
+            <i class='fa-solid fa-square-envelope'></i>
+            <span className='details-text'>{personalInfo.email}</span>
+          </div>
+          <div className='contact-details'>
+            <i class='fa-solid fa-location-dot'></i>
+            <span className='details-text'>{personalInfo.location}</span>
+          </div>
+        </div>
+      </header>
+    </>
   );
 }
 

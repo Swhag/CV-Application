@@ -1,12 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
 /* ------------------------------------------------ */
 /* Header styling */
 /* ------------------------------------------------ */
@@ -55,10 +46,6 @@ body {
   }
 }
 
-/* ------------------------------------------------ */
-/* CV Form Container styling */
-/* ------------------------------------------------ */
-
 .cv-container {
   display: flex;
   flex-wrap: wrap;
@@ -67,28 +54,13 @@ body {
   padding: 40px;
 }
 
-.cv-form {
-  width: 595px;
-}
-
-.cv-preview {
-  padding: 50px;
-  width: 595px;
-  min-width: 595px;
-  height: 842px;
-  border-radius: 2px;
-  border: 1px solid black;
-  box-shadow: 5px 0 6px 0 hsl(0 0% 0% / 0.2);
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-}
-
 /* ------------------------------------------------ */
 /* CV Form (Input) styling */
 /* ------------------------------------------------ */
+
+.cv-form {
+  width: 595px;
+}
 
 #cv-form input,
 #cv-form textarea,
@@ -195,6 +167,79 @@ body {
 /* ------------------------------------------------ */
 /* CV Preview (Output) styling */
 /* ------------------------------------------------ */
+
+.cv-preview {
+  padding: 50px;
+  width: 595px;
+  min-width: 595px;
+  height: 842px;
+  border-radius: 2px;
+  border: 1px solid black;
+  box-shadow: 5px 0 6px 0 hsl(0 0% 0% / 0.2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* ------------------------------------------------ */
+/* CV Preview (Output) Header styling */
+/* ------------------------------------------------ */
+
+#cv-preview {
+  width: 100%;
+}
+
+#cv-preview header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--light-green);
+  padding-bottom: 12px;
+}
+
+#cv-preview h1 {
+  color: var(--dark-green);
+  text-transform: uppercase;
+}
+
+#cv-preview h2 {
+  color: var(--grey);
+}
+
+#cv-preview .heading {
+  display: flex;
+  flex-direction: column;
+}
+
+#cv-preview .details-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+/* ------------------------------------------------ */
+/* CV Preview (Output) Contact styling */
+/* ------------------------------------------------ */
+
+#cv-preview .contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+#cv-preview .details-text {
+  font-size: 1rem;
+}
+
+#cv-preview img {
+  width: 14px;
+}
 
 /* ------------------------------------------------ */
 /* Footer styling */
