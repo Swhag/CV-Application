@@ -12,15 +12,15 @@ function PersonalOutput(props) {
         </div>
         <div className='details-group'>
           <div className='contact-details'>
-            <i class='fa-solid fa-phone'></i>
+            <i className='fa-solid fa-phone'></i>
             <span className='details-text'>{personalInfo.phone}</span>
           </div>
           <div className='contact-details'>
-            <i class='fa-solid fa-square-envelope'></i>
+            <i className='fa-solid fa-square-envelope'></i>
             <span className='details-text'>{personalInfo.email}</span>
           </div>
           <div className='contact-details'>
-            <i class='fa-solid fa-location-dot'></i>
+            <i className='fa-solid fa-location-dot'></i>
             <span className='details-text'>{personalInfo.location}</span>
           </div>
         </div>

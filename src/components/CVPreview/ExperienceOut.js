@@ -4,30 +4,26 @@ function ExperienceOut(props) {
   const { experience } = props;
 
   return (
-    <>
+    <div className='experience-list'>
+      <h3>WORK EXPERIENCE</h3>
+
       {experience.map((exp, i) => {
         return (
-          <ul key={exp.id}>
-            <li>
-              <div className='text-output'>{exp.company}</div>
-            </li>
-            <li>
-              <div className='text-output'>{exp.position}</div>
-            </li>
-            <li>
-              <div className='text-output'>{exp.startDate}</div>
-            </li>
-            <li>
-              <div className='text-output'>{exp.endDate}</div>
-            </li>
-            <li>
-              <div className='text-output'>{exp.description}</div>
-            </li>
-            <div>--------------------------------------------</div>
-          </ul>
+          <div className='experience' key={exp.id}>
+            <div className='experience-heading'>
+              <h4>{exp.position}</h4>
+              <div className='experience-details'>
+                {exp.company} |
+                <span className='bold'>
+                  {exp.startDate} – {exp.endDate}
+                </span>
+              </div>
+            </div>
+            {exp.description}
+          </div>
         );
       })}
-    </>
+    </div>
   );
 }
 

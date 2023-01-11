@@ -128,7 +128,7 @@ class Main extends Component {
 
     return (
       <div className='cv-container'>
-        <div className='cv-form'>
+        <div className='cv-form-wrapper'>
           <CVForm
             personalInfo={personalInfo}
             handleChangePersonal={handleChangePersonal}
@@ -142,7 +142,7 @@ class Main extends Component {
             handleDeleteExperience={handleDeleteExperience}
           ></CVForm>
         </div>
-        <div className='cv-preview'>
+        <div className='cv-preview-wrapper'>
           <CVPreview
             personalInfo={personalInfo}
             education={education}
