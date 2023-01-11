@@ -16,7 +16,6 @@ class App extends Component {
       <>
         <Header></Header>
         <Main></Main>
-        <Footer></Footer>
       </>
     );
   }

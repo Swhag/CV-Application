@@ -7,110 +7,12 @@ body {
   line-height: 1.5;
 }
 
-#cv-form input,
-#cv-form textarea,
-#cv-form button {
-  font: inherit;
-  color: inherit;
-  border: none;
-  background: none;
-  margin: 0;
-  padding: 0;
-}
-
-#cv-form button {
-  cursor: pointer;
-}
-
-/* Styling */
-#cv-form {
-  border: 2px solid #01579b;
-  border-radius: 5px;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#cv-form h2 {
-  font-weight: 400;
-  color: #424242;
-  margin-bottom: 20px;
-}
-
-#cv-form .group label {
-  text-transform: capitalize;
-  display: flex;
-  flex-direction: column;
-}
-
-#cv-form .group input::placeholder {
-  text-transform: capitalize;
-}
-
-#cv-form input {
-  border: 1px solid #757575;
-  border-radius: 3px;
-  font-size: 0.9rem;
-  padding: 10px;
-}
-
-#cv-form .group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-#cv-form .group:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-#cv-form .btn-group {
-  display: flex;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-#cv-form button {
-  color: #000;
-  border: 1px solid #424242;
-  padding: 4px 12px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: all 150ms;
-}
-
-#cv-form .btn-group .btn-add {
-  color: #3b5998;
-}
-
-#cv-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 3px 0 hsl(0 0% 0% / 0.1);
-}
-
-/* #cv-form .group:not(:last-child) button.btn-add {
-  display: none;
-} */
-
 /* ------------------------------------------------ */
 /* Header styling */
 /* ------------------------------------------------ */
 
 .header-container {
-  height: 3rem;
+  height: 4rem;
   background-color: #3b5998;
   display: flex;
   justify-content: center;
@@ -154,7 +56,7 @@ body {
 }
 
 /* ------------------------------------------------ */
-/* CV Form styling */
+/* CV Form Container styling */
 /* ------------------------------------------------ */
 
 .cv-container {
@@ -185,19 +87,113 @@ body {
 }
 
 /* ------------------------------------------------ */
-/* CV Form Contact styling */
+/* CV Form (Input) styling */
 /* ------------------------------------------------ */
 
-/* ------------------------------------------------ */
-/* CV Form Experience styling */
-/* ------------------------------------------------ */
+#cv-form input,
+#cv-form textarea,
+#cv-form button {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+#cv-form button {
+  cursor: pointer;
+}
+
+/* Styling */
+#cv-form {
+  border: 2px solid #01579b;
+  border-radius: 5px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#cv-form h2 {
+  font-weight: 400;
+  color: #01579b;
+  margin-bottom: 10px;
+}
+
+#cv-form label {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+}
+
+#cv-form input {
+  border: 1px solid #757575;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  padding: 5px;
+}
+
+#cv-form input::placeholder {
+  text-transform: capitalize;
+  color: #bdbdbd;
+}
+
+#cv-form input:focus {
+  outline-color: #01579b;
+}
+
+#cv-form .group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#cv-form .group:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#cv-form .btn-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#cv-form button {
+  color: #424242;
+  border: 1px solid #424242;
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: all 150ms;
+}
+
+#cv-form .btn-group .btn-add {
+  color: #3b5998;
+}
+
+#cv-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 3px 0 hsl(0 0% 0% / 0.1);
+}
+
+#cv-form .group:not(:last-child) button.btn-add {
+  display: none;
+}
 
 /* ------------------------------------------------ */
-/* CV Form Input styling */
-/* ------------------------------------------------ */
-
-/* ------------------------------------------------ */
-/* CV Preview styling */
+/* CV Preview (Output) styling */
 /* ------------------------------------------------ */
 
 /* ------------------------------------------------ */

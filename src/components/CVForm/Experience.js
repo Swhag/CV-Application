@@ -55,7 +55,11 @@ function Experience(props) {
               placeholder='Description'
             />
             <div className='btn-group'>
-              <button id={exp.id} onClick={handleDeleteExperience}>
+              <button
+                className='btn-delete'
+                id={exp.id}
+                onClick={handleDeleteExperience}
+              >
                 Delete
               </button>
               <button className='btn-add' onClick={handleAddExperience}>
