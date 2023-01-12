@@ -23,7 +23,7 @@ function ExperienceOut(props) {
               </div>
             </div>
             <ul className='experience-description'>
-              <li>{exp.description}</li>
+              <li>{exp.description[0]}</li>
             </ul>
           </div>
         );

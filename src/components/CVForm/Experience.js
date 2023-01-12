@@ -6,6 +6,7 @@ function Experience(props) {
     handleChangeExperience,
     handleAddExperience,
     handleDeleteExperience,
+    handleAddExperienceDescription,
   } = props;
 
   return (
@@ -46,14 +47,30 @@ function Experience(props) {
               name='endDate'
               placeholder='End Date'
             />
-            <input
+
+            {exp.description.map((des, index) => {
+              return (
+                <input
+                  key={index}
+                  onChange={handleAddExperienceDescription}
+                  value={des}
+                  id={exp.id}
+                  type='text'
+                  // name='description'
+                  name={index}
+                  placeholder='Description'
+                />
+              );
+            })}
+
+            {/* <input
               onChange={handleChangeExperience}
               value={exp.description}
               id={exp.id}
               type='text'
               name='description'
               placeholder='Description'
-            />
+            /> */}
 
             <button onClick={handleAddExperience}>Add Bullet Points</button>
 

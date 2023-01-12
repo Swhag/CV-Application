@@ -89,7 +89,7 @@ class Main extends Component {
       position: '',
       startDate: '',
       endDate: '',
-      description: '',
+      description: [''],
     };
 
     this.setState({
@@ -112,6 +112,27 @@ class Main extends Component {
     });
   };
 
+  handleAddExperienceDescription = (e) => {
+    // console.log(e.target.id);
+    // console.log(e.target.name);
+
+    // console.log(e.target);
+    console.log(e.target.key);
+
+    const { id, name, value } = e.target;
+    let experienceCopy = [...this.state.experience];
+
+    experienceCopy.forEach((exp, index) => {
+      if (exp.id === id) {
+        // console.log(exp.description[name]);
+      }
+    });
+
+    // this.setState({
+    //   experience: [...this.state.experience.description],
+    // });
+  };
+
   // -------------------------------------------------------------------------
 
   render() {
@@ -124,6 +145,7 @@ class Main extends Component {
       handleChangeExperience,
       handleAddExperience,
       handleDeleteExperience,
+      handleAddExperienceDescription,
     } = this;
 
     return (
@@ -140,6 +162,7 @@ class Main extends Component {
             handleChangeExperience={handleChangeExperience}
             handleAddExperience={handleAddExperience}
             handleDeleteExperience={handleDeleteExperience}
+            handleAddExperienceDescription={handleAddExperienceDescription}
           ></CVForm>
         </div>
         <div className='cv-preview-wrapper'>
