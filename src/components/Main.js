@@ -112,25 +112,36 @@ class Main extends Component {
     });
   };
 
-  handleAddExperienceDescription = (e) => {
-    // console.log(e.target.id);
-    // console.log(e.target.name);
-
-    // console.log(e.target);
-    console.log(e.target.key);
-
+  handleChangeExperienceDescription = (e) => {
     const { id, name, value } = e.target;
+    const index = e.target.dataset.index;
     let experienceCopy = [...this.state.experience];
 
-    experienceCopy.forEach((exp, index) => {
+    experienceCopy.forEach((exp) => {
       if (exp.id === id) {
-        // console.log(exp.description[name]);
+        exp[name][index] = value;
       }
     });
 
-    // this.setState({
-    //   experience: [...this.state.experience.description],
-    // });
+    this.setState({
+      experience: [...experienceCopy],
+    });
+  };
+
+  handleAddExperienceDescription = (e) => {
+    const { id, name, value } = e.target;
+    let experienceCopy = [...this.state.experience];
+
+    experienceCopy.forEach((exp) => {
+      if (exp.id === id) {
+        exp[name].push('');
+        console.log(exp[name]);
+      }
+    });
+
+    this.setState({
+      experience: [...experienceCopy],
+    });
   };
 
   // -------------------------------------------------------------------------
@@ -145,6 +156,7 @@ class Main extends Component {
       handleChangeExperience,
       handleAddExperience,
       handleDeleteExperience,
+      handleChangeExperienceDescription,
       handleAddExperienceDescription,
     } = this;
 
@@ -162,6 +174,9 @@ class Main extends Component {
             handleChangeExperience={handleChangeExperience}
             handleAddExperience={handleAddExperience}
             handleDeleteExperience={handleDeleteExperience}
+            handleChangeExperienceDescription={
+              handleChangeExperienceDescription
+            }
             handleAddExperienceDescription={handleAddExperienceDescription}
           ></CVForm>
         </div>

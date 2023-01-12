@@ -15,6 +15,7 @@ function CVForm(props) {
     handleChangeExperience,
     handleAddExperience,
     handleDeleteExperience,
+    handleChangeExperienceDescription,
     handleAddExperienceDescription,
   } = props;
 
@@ -37,6 +38,7 @@ function CVForm(props) {
         handleChangeExperience={handleChangeExperience}
         handleAddExperience={handleAddExperience}
         handleDeleteExperience={handleDeleteExperience}
+        handleChangeExperienceDescription={handleChangeExperienceDescription}
         handleAddExperienceDescription={handleAddExperienceDescription}
       ></Experience>
     </div>

@@ -6,6 +6,7 @@ function Experience(props) {
     handleChangeExperience,
     handleAddExperience,
     handleDeleteExperience,
+    handleChangeExperienceDescription,
     handleAddExperienceDescription,
   } = props;
 
@@ -52,27 +53,24 @@ function Experience(props) {
               return (
                 <input
                   key={index}
-                  onChange={handleAddExperienceDescription}
+                  onChange={handleChangeExperienceDescription}
                   value={des}
                   id={exp.id}
                   type='text'
-                  // name='description'
-                  name={index}
-                  placeholder='Description'
+                  data-index={index}
+                  name='description'
+                  placeholder={`Description ${index}`}
                 />
               );
             })}
 
-            {/* <input
-              onChange={handleChangeExperience}
-              value={exp.description}
+            <button
               id={exp.id}
-              type='text'
               name='description'
-              placeholder='Description'
-            /> */}
-
-            <button onClick={handleAddExperience}>Add Bullet Points</button>
+              onClick={handleAddExperienceDescription}
+            >
+              Add Bullet Points
+            </button>
 
             <div className='btn-group'>
               <button className='btn-add' onClick={handleAddExperience}>

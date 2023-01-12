@@ -23,7 +23,9 @@ function ExperienceOut(props) {
               </div>
             </div>
             <ul className='experience-description'>
-              <li>{exp.description[0]}</li>
+              {exp.description.map((des, index) => {
+                return <li key={index}>{des}</li>;
+              })}
             </ul>
           </div>
         );
