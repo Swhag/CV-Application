@@ -28,7 +28,7 @@ const emptyCV = {
       position: '',
       startDate: '',
       endDate: '',
-      description: ['description 1', 'description 2'],
+      description: ['', '', ''],
     },
   ],
 

@@ -104,6 +104,8 @@
   border-radius: 3px;
   font-size: 0.9rem;
   padding: 5px;
+
+  width: 100%;
 }
 
 #cv-form input::placeholder {
@@ -113,6 +115,10 @@
 
 #cv-form input:focus {
   outline-color: #01579b;
+}
+
+#cv-form delete-icons i {
+  position: absolute;
 }
 
 #cv-form .group {
@@ -163,6 +169,29 @@
 
 #cv-form .group:not(:last-child) button.btn-add {
   display: none;
+}
+
+#cv-form .description-input {
+  position: relative;
+}
+
+#cv-form .delete-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 0px;
+  right: -20px;
+  width: 20px;
+  height: 30px;
+  color: #b71c1c;
+  font-size: 1rem;
+}
+
+#cv-form .delete-icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 /* ------------------------------------------------ */

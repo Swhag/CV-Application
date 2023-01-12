@@ -8,6 +8,7 @@ function Experience(props) {
     handleDeleteExperience,
     handleChangeExperienceDescription,
     handleAddExperienceDescription,
+    handleDeleteExperienceDescription,
   } = props;
 
   return (
@@ -51,24 +52,30 @@ function Experience(props) {
 
             {exp.description.map((des, index) => {
               return (
-                <input
-                  key={index}
-                  onChange={handleChangeExperienceDescription}
-                  value={des}
-                  id={exp.id}
-                  type='text'
-                  data-index={index}
-                  name='description'
-                  placeholder={`Description ${index}`}
-                />
+                <div className='description-input' key={index}>
+                  <input
+                    onChange={handleChangeExperienceDescription}
+                    value={des}
+                    id={exp.id}
+                    type='text'
+                    data-index={index}
+                    name='description'
+                    placeholder={`Description ${index + 1}`}
+                  />
+
+                  <i
+                    id={exp.id}
+                    data-index={index}
+                    className='fa-solid fa-ban delete-icon'
+                    onClick={(e) => {
+                      handleDeleteExperienceDescription(e);
+                    }}
+                  ></i>
+                </div>
               );
             })}
 
-            <button
-              id={exp.id}
-              name='description'
-              onClick={handleAddExperienceDescription}
-            >
+            <button id={exp.id} onClick={handleAddExperienceDescription}>
               Add Bullet Points
             </button>
 
