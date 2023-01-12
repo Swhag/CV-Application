@@ -5,6 +5,7 @@ import CVForm from './CVForm/CVForm';
 import CVPreview from './CVPreview/CVPreview';
 
 import emptyCV from './utils/emptyCV';
+import exampleCV from './utils/exampleCV';
 
 class Main extends Component {
   constructor() {
@@ -12,6 +13,18 @@ class Main extends Component {
 
     this.state = emptyCV;
   }
+
+  // -------------------------------------------------------------------------
+
+  handleLoadEmptyCV = (e) => {
+    this.setState(emptyCV);
+  };
+
+  handleLoadExampleCV = (e) => {
+    this.setState(exampleCV);
+  };
+
+  // -------------------------------------------------------------------------
 
   handleChangePersonal = (e) => {
     const { name, value } = e.target;
@@ -57,11 +70,13 @@ class Main extends Component {
     const { id } = e.target;
     let educationCopy = [...this.state.education];
 
-    educationCopy.forEach((exp, index) => {
-      if (exp.id === id) {
-        educationCopy.splice(index, 1);
-      }
-    });
+    if (window.confirm('Delete this education list?')) {
+      educationCopy.forEach((exp, index) => {
+        if (exp.id === id) {
+          educationCopy.splice(index, 1);
+        }
+      });
+    }
 
     this.setState({
       education: [...educationCopy],
@@ -101,11 +116,13 @@ class Main extends Component {
     const { id } = e.target;
     let experienceCopy = [...this.state.experience];
 
-    experienceCopy.forEach((exp, index) => {
-      if (exp.id === id) {
-        experienceCopy.splice(index, 1);
-      }
-    });
+    if (window.confirm('Delete this experience list?')) {
+      experienceCopy.forEach((exp, index) => {
+        if (exp.id === id) {
+          experienceCopy.splice(index, 1);
+        }
+      });
+    }
 
     this.setState({
       experience: [...experienceCopy],
@@ -148,11 +165,13 @@ class Main extends Component {
     const index = e.target.dataset.index;
     let experienceCopy = [...this.state.experience];
 
-    experienceCopy.forEach((exp) => {
-      if (exp.id === id) {
-        exp.description.splice(index, 1);
-      }
-    });
+    if (window.confirm('Do you want to delete this description?')) {
+      experienceCopy.forEach((exp) => {
+        if (exp.id === id) {
+          exp.description.splice(index, 1);
+        }
+      });
+    }
 
     this.setState({
       experience: [...experienceCopy],
@@ -164,6 +183,8 @@ class Main extends Component {
   render() {
     const { personalInfo, education, experience } = this.state;
     const {
+      handleLoadEmptyCV,
+      handleLoadExampleCV,
       handleChangePersonal,
       handleChangeEducation,
       handleAddEducation,
@@ -180,6 +201,8 @@ class Main extends Component {
       <div className='cv-container'>
         <div className='cv-form-wrapper'>
           <CVForm
+            handleLoadEmptyCV={handleLoadEmptyCV}
+            handleLoadExampleCV={handleLoadExampleCV}
             personalInfo={personalInfo}
             handleChangePersonal={handleChangePersonal}
             education={education}
