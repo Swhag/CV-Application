@@ -17,8 +17,8 @@ function Education(props) {
               </div>
             </div>
             <div>{edu.program}</div>
-            <div className='education-heading'>
-              <div>{edu.degree}</div>
+            <div className='education-info'>
+              <div className='degree'>{edu.degree}</div>
               <div className='education-details'>
                 <span className='bold'>{edu.gpa}</span>
               </div>

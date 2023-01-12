@@ -54,6 +54,9 @@ function Experience(props) {
               name='description'
               placeholder='Description'
             />
+
+            <button onClick={handleAddExperience}>Add Bullet Points</button>
+
             <div className='btn-group'>
               <button className='btn-add' onClick={handleAddExperience}>
                 Add
