@@ -197,35 +197,31 @@ class Main extends Component {
   };
 
   handleAddSkills = () => {
-    const newExperience = {
+    const newSkills = {
       id: uuidv4(),
-      company: '',
-      location: '',
-      position: '',
-      startDate: '',
-      endDate: '',
-      description: ['', '', ''],
+      name: '',
+      lists: '',
     };
 
     this.setState({
-      experience: [...this.state.experience, newExperience],
+      skills: [...this.state.skills, newSkills],
     });
   };
 
   handleDeleteSkills = (e) => {
     const { id } = e.target;
-    let experienceCopy = [...this.state.experience];
+    let skillsCopy = [...this.state.skills];
 
-    if (window.confirm('Delete this experience list?')) {
-      experienceCopy.forEach((exp, index) => {
-        if (exp.id === id) {
-          experienceCopy.splice(index, 1);
+    if (window.confirm('Delete this skills list?')) {
+      skillsCopy.forEach((skill, index) => {
+        if (skill.id === id) {
+          skillsCopy.splice(index, 1);
         }
       });
     }
 
     this.setState({
-      experience: [...experienceCopy],
+      skills: [...skillsCopy],
     });
   };
 

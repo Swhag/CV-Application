@@ -26,6 +26,19 @@ function SkillsField(props) {
               name='lists'
               placeholder='skill lists'
             />
+
+            <div className='btn-group'>
+              <button className='btn-add' onClick={handleAddSkills}>
+                Add
+              </button>
+              <button
+                className='btn-delete'
+                id={skill.id}
+                onClick={handleDeleteSkills}
+              >
+                Delete
+              </button>
+            </div>
           </div>
         );
       })}
