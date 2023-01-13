@@ -183,13 +183,16 @@ class Main extends Component {
 
   handleSkillsChange = (e) => {
     const { id, name, value } = e.target;
-    let experienceCopy = [...this.state.experience];
-    let experience = experienceCopy.find((experience) => experience.id === id);
+    let skillsCopy = [...this.state.skills];
+    let skill = skillsCopy.find((skill) => skill.id === id);
 
-    experience[name] = value;
+    skill[name] = value;
+
+    console.log(skill.name);
+    console.log(skill.lists);
 
     this.setState({
-      experience: [...experienceCopy],
+      skills: [...skillsCopy],
     });
   };
 
@@ -271,7 +274,7 @@ class Main extends Component {
             handleDeleteExperienceDescription={
               handleDeleteExperienceDescription
             }
-            skill={skills}
+            skills={skills}
             handleSkillsChange={handleSkillsChange}
             handleAddSkills={handleAddSkills}
             handleDeleteSkills={handleDeleteSkills}

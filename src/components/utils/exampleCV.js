@@ -54,8 +54,14 @@ const exampleCV = {
   skills: [
     {
       id: uuidv4(),
-      name: '',
-      lists: '',
+      name: 'Coding Languages',
+      lists:
+        'Python, C++, MySQL, PowerShell, JavaScript, PHP, JavaScript, HTML, CSS, jQuery',
+    },
+    {
+      id: uuidv4(),
+      name: 'Computer Skills',
+      lists: 'Active Directory, MS Office Word, Excel, Access, Git, Gitbash',
     },
   ],
 };

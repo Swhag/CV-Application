@@ -23,7 +23,7 @@ function SkillsField(props) {
               value={skill.lists}
               id={skill.id}
               type='text'
-              name='items'
+              name='lists'
               placeholder='skill lists'
             />
           </div>
