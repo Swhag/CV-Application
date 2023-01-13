@@ -28,7 +28,7 @@ function Education(props) {
               id={edu.id}
               type='text'
               name='program'
-              placeholder='Program'
+              placeholder='School Program (Optional)'
             />
             <input
               onChange={handleChangeEducation}
@@ -52,7 +52,7 @@ function Education(props) {
               id={edu.id}
               type='text'
               name='gpa'
-              placeholder='GPA'
+              placeholder='GPA (Optional)'
             />
 
             <div className='btn-group'>

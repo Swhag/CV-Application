@@ -101,6 +101,7 @@ class Main extends Component {
     const newExperience = {
       id: uuidv4(),
       company: '',
+      location: '',
       position: '',
       startDate: '',
       endDate: '',

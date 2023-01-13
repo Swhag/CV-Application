@@ -7,7 +7,7 @@ const emptyCV = {
     phone: '',
     email: '',
     location: '',
-    description: '',
+    summary: '',
   },
 
   education: [
@@ -25,6 +25,7 @@ const emptyCV = {
     {
       id: uuidv4(),
       company: '',
+      location: '',
       position: '',
       startDate: '',
       endDate: '',

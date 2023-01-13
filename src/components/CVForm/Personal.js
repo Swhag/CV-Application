@@ -44,10 +44,10 @@ function Personal(props) {
         />
         <input
           onChange={handleChangePersonal}
-          value={personalInfo.description}
+          value={personalInfo.summary}
           type='text'
-          name='description'
-          placeholder='Description'
+          name='summary'
+          placeholder='Summary'
         />
       </div>
     </section>

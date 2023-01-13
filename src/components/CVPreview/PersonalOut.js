@@ -25,6 +25,7 @@ function PersonalOutput(props) {
           </div>
         </div>
       </header>
+      <span className='details-text'>{personalInfo.summary}</span>
     </>
   );
 }

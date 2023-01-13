@@ -27,6 +27,14 @@ function Experience(props) {
             />
             <input
               onChange={handleChangeExperience}
+              value={exp.location}
+              id={exp.id}
+              type='text'
+              name='location'
+              placeholder='location'
+            />
+            <input
+              onChange={handleChangeExperience}
               value={exp.position}
               id={exp.id}
               type='text'

@@ -12,6 +12,7 @@ function ExperienceOut(props) {
           <div className='experience' key={exp.id}>
             <div className='experience-heading'>
               <h4>{exp.company}</h4>
+              <span className='italic'> – {exp.location}</span>
             </div>
             <div className='experience-info'>
               <div>{exp.position}</div>
