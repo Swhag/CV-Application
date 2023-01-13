@@ -9,11 +9,9 @@ function SkillsOut(props) {
 
       {skills.map((skill, i) => {
         return (
-          <div className='experience' key={skill.id}>
-            <div className='experience-heading'>
-              <div>
-                {skill.name}: <span> {skill.lists}</span>
-              </div>
+          <div className='skills' key={skill.id}>
+            <div>
+              {skill.name}: <span>{skill.lists}</span>
             </div>
           </div>
         );

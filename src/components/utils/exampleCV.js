@@ -56,12 +56,13 @@ const exampleCV = {
       id: uuidv4(),
       name: 'Coding Languages',
       lists:
-        'Python, C++, MySQL, PowerShell, JavaScript, PHP, JavaScript, HTML, CSS, jQuery',
+        'Python, C++, PowerShell, JavaScript, PHP, JavaScript, HTML, CSS, jQuery, WordPress, MySQL, Django',
     },
     {
       id: uuidv4(),
       name: 'Computer Skills',
-      lists: 'Active Directory, MS Office Word, Excel, Access, Git, Gitbash',
+      lists:
+        'Windows Server 2012/2016, Windows 7/8/10/11, IOS, Active Directory, MS Office Word, Excel, Access, Git, Gitbash, Ubuntu, Kali Linux',
     },
   ],
 };
