@@ -181,8 +181,55 @@ class Main extends Component {
 
   // -------------------------------------------------------------------------
 
+  handleSkillsChange = (e) => {
+    const { id, name, value } = e.target;
+    let experienceCopy = [...this.state.experience];
+    let experience = experienceCopy.find((experience) => experience.id === id);
+
+    experience[name] = value;
+
+    this.setState({
+      experience: [...experienceCopy],
+    });
+  };
+
+  handleAddSkills = () => {
+    const newExperience = {
+      id: uuidv4(),
+      company: '',
+      location: '',
+      position: '',
+      startDate: '',
+      endDate: '',
+      description: ['', '', ''],
+    };
+
+    this.setState({
+      experience: [...this.state.experience, newExperience],
+    });
+  };
+
+  handleDeleteSkills = (e) => {
+    const { id } = e.target;
+    let experienceCopy = [...this.state.experience];
+
+    if (window.confirm('Delete this experience list?')) {
+      experienceCopy.forEach((exp, index) => {
+        if (exp.id === id) {
+          experienceCopy.splice(index, 1);
+        }
+      });
+    }
+
+    this.setState({
+      experience: [...experienceCopy],
+    });
+  };
+
+  // -------------------------------------------------------------------------
+
   render() {
-    const { personalInfo, education, experience } = this.state;
+    const { personalInfo, education, experience, skills } = this.state;
     const {
       handleLoadEmptyCV,
       handleLoadExampleCV,
@@ -196,6 +243,9 @@ class Main extends Component {
       handleChangeExperienceDescription,
       handleAddExperienceDescription,
       handleDeleteExperienceDescription,
+      handleSkillsChange,
+      handleAddSkills,
+      handleDeleteSkills,
     } = this;
 
     return (
@@ -221,6 +271,10 @@ class Main extends Component {
             handleDeleteExperienceDescription={
               handleDeleteExperienceDescription
             }
+            skill={skills}
+            handleSkillsChange={handleSkillsChange}
+            handleAddSkills={handleAddSkills}
+            handleDeleteSkills={handleDeleteSkills}
           ></CVForm>
         </div>
         <div className='cv-preview-wrapper'>
@@ -228,6 +282,7 @@ class Main extends Component {
             personalInfo={personalInfo}
             education={education}
             experience={experience}
+            skills={skills}
           ></CVPreview>
         </div>
       </div>

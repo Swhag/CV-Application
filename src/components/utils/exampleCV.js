@@ -51,7 +51,13 @@ const exampleCV = {
     },
   ],
 
-  tasks: [],
+  skills: [
+    {
+      id: uuidv4(),
+      name: '',
+      lists: '',
+    },
+  ],
 };
 
 export default exampleCV;

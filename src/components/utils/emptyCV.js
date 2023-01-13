@@ -33,7 +33,13 @@ const emptyCV = {
     },
   ],
 
-  tasks: [],
+  skills: [
+    {
+      id: uuidv4(),
+      name: '',
+      lists: '',
+    },
+  ],
 };
 
 export default emptyCV;

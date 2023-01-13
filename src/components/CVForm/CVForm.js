@@ -2,6 +2,7 @@ import React from 'react';
 import Personal from './Personal';
 import Education from './Education';
 import Experience from './Experience';
+import SkillsField from './Skills';
 
 function CVForm(props) {
   const {
@@ -20,6 +21,10 @@ function CVForm(props) {
     handleChangeExperienceDescription,
     handleAddExperienceDescription,
     handleDeleteExperienceDescription,
+    skills,
+    handleSkillsChange,
+    handleAddSkills,
+    handleDeleteSkills,
   } = props;
 
   return (
@@ -54,6 +59,12 @@ function CVForm(props) {
         handleAddExperienceDescription={handleAddExperienceDescription}
         handleDeleteExperienceDescription={handleDeleteExperienceDescription}
       ></Experience>
+      <SkillsField
+        skills={skills}
+        handleSkillsChange={handleSkillsChange}
+        handleAddSkills={handleAddSkills}
+        handleDeleteSkills={handleDeleteSkills}
+      ></SkillsField>
     </div>
   );
 }
