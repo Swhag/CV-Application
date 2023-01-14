@@ -271,6 +271,7 @@ class Main extends Component {
           handleDeleteSkills={handleDeleteSkills}
         ></CVForm>
         <CVPreview
+          pageStyle='@page { size: 2.5in 4in }'
           personalInfo={personalInfo}
           education={education}
           experience={experience}
