@@ -157,10 +157,6 @@
   transition: all 150ms;
 }
 
-#cv-form .btn-group .btn-add {
-  color: #3b5998;
-}
-
 #cv-form button:hover {
   transform: translateY(-2px);
   box-shadow: 0 2px 3px 0 hsl(0 0% 0% / 0.1);
@@ -220,7 +216,6 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  position: sticky;
   top: 0px;
 }
 
@@ -446,38 +441,35 @@ h4,
 }
 
 /* ------------------------------------------------ */
-/* CV Form bottom buttons styling */
+/* CV Form side buttons styling */
 /* ------------------------------------------------ */
 
-.bottom-btn-group {
+.side-btn-group {
   margin-top: 1rem;
-  position: sticky;
-  top: 20px;
+  width: 0px;
+  height: 842px;
+  padding-top: 50px;
 
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  position: sticky;
+  top: 20px;
 }
 
-.bottom-btn {
-  width: 100px;
-  border-radius: 5px;
-  font-size: 1rem;
-  padding: 8px;
-
-  outline: none;
-  background: none;
-
+.side-btn {
   color: #fff;
   background-color: #3b5998;
-  border: 1px solid #424242;
+
+  width: 100px;
+  border-radius: 5px;
+  padding: 6px;
+
+  outline: none;
   border: none;
 }
 
-.bottom-btn:hover {
+.side-btn:hover {
   cursor: pointer;
-}
-
-.print {
-  width: 100%;
 }

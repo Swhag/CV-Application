@@ -6,8 +6,6 @@ import SkillsField from './Skills';
 
 function CVForm(props) {
   const {
-    handleLoadEmptyCV,
-    handleLoadExampleCV,
     personalInfo,
     handleChangePersonal,
     education,
@@ -30,15 +28,6 @@ function CVForm(props) {
   return (
     <div className='cv-form-wrapper'>
       <div id='cv-form'>
-        <div className='btn-group'>
-          <button className='btn-add' onClick={handleLoadEmptyCV}>
-            New
-          </button>
-          <button className='btn-delete' onClick={handleLoadExampleCV}>
-            Load Example
-          </button>
-        </div>
-
         <Personal
           personalInfo={personalInfo}
           handleChangePersonal={handleChangePersonal}

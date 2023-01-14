@@ -16,7 +16,14 @@ function CVPreview(props) {
   }
 `;
 
-  const { personalInfo, education, experience, skills } = props;
+  const {
+    handleLoadEmptyCV,
+    handleLoadExampleCV,
+    personalInfo,
+    education,
+    experience,
+    skills,
+  } = props;
 
   return (
     <>
@@ -29,8 +36,14 @@ function CVPreview(props) {
           <SkillsOut skills={skills}></SkillsOut>
         </div>
       </div>
-      <div className='bottom-btn-group'>
-        <button className='bottom-btn' onClick={handlePrint}>
+      <div className='side-btn-group'>
+        <button className='side-btn' onClick={handleLoadEmptyCV}>
+          New
+        </button>
+        <button className='side-btn' onClick={handleLoadExampleCV}>
+          Load Example
+        </button>
+        <button className='side-btn' onClick={handlePrint}>
           Generate PDF
         </button>
       </div>

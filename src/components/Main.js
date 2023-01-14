@@ -4,23 +4,28 @@ import { v4 as uuidv4 } from 'uuid';
 import CVForm from './CVForm/CVForm';
 import CVPreview from './CVPreview/CVPreview';
 
+import myCV from './utils/myCV';
 import emptyCV from './utils/emptyCV';
 import exampleCV from './utils/exampleCV';
+
+let newEmptyCV = JSON.parse(JSON.stringify(emptyCV));
 
 class Main extends Component {
   constructor() {
     super();
 
-    this.state = emptyCV;
+    this.state = newEmptyCV;
   }
 
   // -------------------------------------------------------------------------
 
-  handleLoadEmptyCV = (e) => {
-    this.setState(emptyCV);
+  handleLoadEmptyCV = () => {
+    let newEmptyCV = JSON.parse(JSON.stringify(emptyCV));
+
+    this.setState({ ...newEmptyCV });
   };
 
-  handleLoadExampleCV = (e) => {
+  handleLoadExampleCV = () => {
     this.setState(exampleCV);
   };
 
@@ -250,8 +255,6 @@ class Main extends Component {
     return (
       <div className='cv-container'>
         <CVForm
-          handleLoadEmptyCV={handleLoadEmptyCV}
-          handleLoadExampleCV={handleLoadExampleCV}
           personalInfo={personalInfo}
           handleChangePersonal={handleChangePersonal}
           education={education}
@@ -271,7 +274,8 @@ class Main extends Component {
           handleDeleteSkills={handleDeleteSkills}
         ></CVForm>
         <CVPreview
-          pageStyle='@page { size: 2.5in 4in }'
+          handleLoadEmptyCV={handleLoadEmptyCV}
+          handleLoadExampleCV={handleLoadExampleCV}
           personalInfo={personalInfo}
           education={education}
           experience={experience}
