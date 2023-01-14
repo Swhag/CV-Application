@@ -446,7 +446,7 @@ h4,
 }
 
 /* ------------------------------------------------ */
-/* CV Form side buttons styling */
+/* CV Form bottom buttons styling */
 /* ------------------------------------------------ */
 
 .bottom-btn-group {
@@ -476,4 +476,8 @@ h4,
 
 .bottom-btn:hover {
   cursor: pointer;
+}
+
+.print {
+  width: 100%;
 }
