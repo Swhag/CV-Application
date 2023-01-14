@@ -276,6 +276,73 @@
 }
 
 /* ------------------------------------------------ */
+/* CV Preview (Output) Education styling */
+/* ------------------------------------------------ */
+
+#cv-preview .education-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+#cv-preview .education-list h3 {
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+#cv-preview .education {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+#cv-preview .education-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cv-preview .education-heading h4 {
+  color: #212121;
+  font-weight: 600;
+}
+
+#cv-preview .education-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cv-preview .education-info .degree {
+  font-style: italic;
+}
+
+#cv-preview .education-details,
+h4,
+.education-details {
+  color: var(--grey);
+}
+
+#cv-preview .education-details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+#cv-preview .education-list .bold {
+  font-weight: 600;
+}
+
+/* ------------------------------------------------ */
 /* CV Preview (Output) Experience styling */
 /* ------------------------------------------------ */
 
@@ -306,6 +373,11 @@
   flex-direction: row;
   align-items: center;
   gap: 4px;
+}
+
+#cv-preview .experience-heading h4 {
+  color: #212121;
+  font-weight: 600;
 }
 
 #cv-preview .experience-info {
@@ -342,10 +414,10 @@ h4,
 }
 
 /* ------------------------------------------------ */
-/* CV Preview (Output) Education styling */
+/* CV Preview (Output) Skills styling */
 /* ------------------------------------------------ */
 
-#cv-preview .education-list {
+#cv-preview .skills-list {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -353,66 +425,17 @@ h4,
   gap: 8px;
 }
 
-#cv-preview .education-list h3 {
-  text-transform: uppercase;
-  color: var(--blue);
-}
-
-#cv-preview .education {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
-}
-
-#cv-preview .education-heading {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#cv-preview .education-info {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#cv-preview .education-info .degree {
-  font-style: italic;
-}
-
-#cv-preview .education-details,
-h4,
-.education-details {
-  color: var(--grey);
-}
-
-#cv-preview .education-details {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 2px;
-}
-
-#cv-preview .education-list .bold {
-  font-weight: 600;
-}
-
-/* ------------------------------------------------ */
-/* CV Preview (Output) Skills styling */
-/* ------------------------------------------------ */
-
 #cv-preview .skills {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 2px;
+}
+
+#cv-preview .skill-name {
+  color: #212121;
+  font-weight: 600;
 }
 
 /* ------------------------------------------------ */

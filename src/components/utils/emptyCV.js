@@ -3,10 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 const emptyCV = {
   personalInfo: {
     name: '',
-    title: '',
     phone: '',
     email: '',
-    location: '',
     summary: '',
   },
 

@@ -16,13 +16,6 @@ function Personal(props) {
         />
         <input
           onChange={handleChangePersonal}
-          value={personalInfo.title}
-          type='text'
-          name='title'
-          placeholder='Title'
-        />
-        <input
-          onChange={handleChangePersonal}
           value={personalInfo.phone}
           type='text'
           name='phone'
@@ -34,13 +27,6 @@ function Personal(props) {
           type='text'
           name='email'
           placeholder='Email'
-        />
-        <input
-          onChange={handleChangePersonal}
-          value={personalInfo.location}
-          type='text'
-          name='location'
-          placeholder='Location'
         />
         <input
           onChange={handleChangePersonal}

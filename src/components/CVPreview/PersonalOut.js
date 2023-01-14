@@ -8,7 +8,6 @@ function PersonalOutput(props) {
       <header>
         <div className='heading'>
           <h1>{personalInfo.name}</h1>
-          <h2>{personalInfo.title}</h2>
         </div>
         <div className='details-group'>
           <div className='contact-details'>
@@ -18,10 +17,6 @@ function PersonalOutput(props) {
           <div className='contact-details'>
             <i className='fa-solid fa-square-envelope'></i>
             <span className='details-text'>{personalInfo.email}</span>
-          </div>
-          <div className='contact-details'>
-            <i className='fa-solid fa-location-dot'></i>
-            <span className='details-text'>{personalInfo.location}</span>
           </div>
         </div>
       </header>
