@@ -28,43 +28,45 @@ function CVForm(props) {
   } = props;
 
   return (
-    <div id='cv-form'>
-      <div className='btn-group'>
-        <button className='btn-add' onClick={handleLoadEmptyCV}>
-          New
-        </button>
-        <button className='btn-delete' onClick={handleLoadExampleCV}>
-          Load Example
-        </button>
+    <div className='cv-form-wrapper'>
+      <div id='cv-form'>
+        <div className='btn-group'>
+          <button className='btn-add' onClick={handleLoadEmptyCV}>
+            New
+          </button>
+          <button className='btn-delete' onClick={handleLoadExampleCV}>
+            Load Example
+          </button>
+        </div>
+
+        <Personal
+          personalInfo={personalInfo}
+          handleChangePersonal={handleChangePersonal}
+        ></Personal>
+
+        <Education
+          education={education}
+          handleChangeEducation={handleChangeEducation}
+          handleAddEducation={handleAddEducation}
+          handleDeleteEducation={handleDeleteEducation}
+        ></Education>
+
+        <Experience
+          experience={experience}
+          handleChangeExperience={handleChangeExperience}
+          handleAddExperience={handleAddExperience}
+          handleDeleteExperience={handleDeleteExperience}
+          handleChangeExperienceDescription={handleChangeExperienceDescription}
+          handleAddExperienceDescription={handleAddExperienceDescription}
+          handleDeleteExperienceDescription={handleDeleteExperienceDescription}
+        ></Experience>
+        <SkillsField
+          skills={skills}
+          handleSkillsChange={handleSkillsChange}
+          handleAddSkills={handleAddSkills}
+          handleDeleteSkills={handleDeleteSkills}
+        ></SkillsField>
       </div>
-
-      <Personal
-        personalInfo={personalInfo}
-        handleChangePersonal={handleChangePersonal}
-      ></Personal>
-
-      <Education
-        education={education}
-        handleChangeEducation={handleChangeEducation}
-        handleAddEducation={handleAddEducation}
-        handleDeleteEducation={handleDeleteEducation}
-      ></Education>
-
-      <Experience
-        experience={experience}
-        handleChangeExperience={handleChangeExperience}
-        handleAddExperience={handleAddExperience}
-        handleDeleteExperience={handleDeleteExperience}
-        handleChangeExperienceDescription={handleChangeExperienceDescription}
-        handleAddExperienceDescription={handleAddExperienceDescription}
-        handleDeleteExperienceDescription={handleDeleteExperienceDescription}
-      ></Experience>
-      <SkillsField
-        skills={skills}
-        handleSkillsChange={handleSkillsChange}
-        handleAddSkills={handleAddSkills}
-        handleDeleteSkills={handleDeleteSkills}
-      ></SkillsField>
     </div>
   );
 }

@@ -7,6 +7,8 @@ import CVPreview from './CVPreview/CVPreview';
 import emptyCV from './utils/emptyCV';
 import exampleCV from './utils/exampleCV';
 
+import { useReactToPrint } from 'react-to-print';
+
 class Main extends Component {
   constructor() {
     super();
@@ -249,44 +251,113 @@ class Main extends Component {
 
     return (
       <div className='cv-container'>
-        <div className='cv-form-wrapper'>
-          <CVForm
-            handleLoadEmptyCV={handleLoadEmptyCV}
-            handleLoadExampleCV={handleLoadExampleCV}
-            personalInfo={personalInfo}
-            handleChangePersonal={handleChangePersonal}
-            education={education}
-            handleChangeEducation={handleChangeEducation}
-            handleAddEducation={handleAddEducation}
-            handleDeleteEducation={handleDeleteEducation}
-            experience={experience}
-            handleChangeExperience={handleChangeExperience}
-            handleAddExperience={handleAddExperience}
-            handleDeleteExperience={handleDeleteExperience}
-            handleChangeExperienceDescription={
-              handleChangeExperienceDescription
-            }
-            handleAddExperienceDescription={handleAddExperienceDescription}
-            handleDeleteExperienceDescription={
-              handleDeleteExperienceDescription
-            }
-            skills={skills}
-            handleSkillsChange={handleSkillsChange}
-            handleAddSkills={handleAddSkills}
-            handleDeleteSkills={handleDeleteSkills}
-          ></CVForm>
-        </div>
-        <div className='cv-preview-wrapper'>
-          <CVPreview
-            personalInfo={personalInfo}
-            education={education}
-            experience={experience}
-            skills={skills}
-          ></CVPreview>
-        </div>
+        <CVFormPage
+          handleLoadEmptyCV={handleLoadEmptyCV}
+          handleLoadExampleCV={handleLoadExampleCV}
+          personalInfo={personalInfo}
+          handleChangePersonal={handleChangePersonal}
+          education={education}
+          handleChangeEducation={handleChangeEducation}
+          handleAddEducation={handleAddEducation}
+          handleDeleteEducation={handleDeleteEducation}
+          experience={experience}
+          handleChangeExperience={handleChangeExperience}
+          handleAddExperience={handleAddExperience}
+          handleDeleteExperience={handleDeleteExperience}
+          handleChangeExperienceDescription={handleChangeExperienceDescription}
+          handleAddExperienceDescription={handleAddExperienceDescription}
+          handleDeleteExperienceDescription={handleDeleteExperienceDescription}
+          skills={skills}
+          handleSkillsChange={handleSkillsChange}
+          handleAddSkills={handleAddSkills}
+          handleDeleteSkills={handleDeleteSkills}
+        ></CVFormPage>
+        {/* <CVForm
+          handleLoadEmptyCV={handleLoadEmptyCV}
+          handleLoadExampleCV={handleLoadExampleCV}
+          personalInfo={personalInfo}
+          handleChangePersonal={handleChangePersonal}
+          education={education}
+          handleChangeEducation={handleChangeEducation}
+          handleAddEducation={handleAddEducation}
+          handleDeleteEducation={handleDeleteEducation}
+          experience={experience}
+          handleChangeExperience={handleChangeExperience}
+          handleAddExperience={handleAddExperience}
+          handleDeleteExperience={handleDeleteExperience}
+          handleChangeExperienceDescription={handleChangeExperienceDescription}
+          handleAddExperienceDescription={handleAddExperienceDescription}
+          handleDeleteExperienceDescription={handleDeleteExperienceDescription}
+          skills={skills}
+          handleSkillsChange={handleSkillsChange}
+          handleAddSkills={handleAddSkills}
+          handleDeleteSkills={handleDeleteSkills}
+        ></CVForm>
+        <CVPreview
+          personalInfo={personalInfo}
+          education={education}
+          experience={experience}
+          skills={skills}
+        ></CVPreview> */}
       </div>
     );
   }
+}
+
+function CVFormPage(props) {
+  const {
+    handleLoadEmptyCV,
+    handleLoadExampleCV,
+    personalInfo,
+    handleChangePersonal,
+    education,
+    handleChangeEducation,
+    handleAddEducation,
+    handleDeleteEducation,
+    experience,
+    handleChangeExperience,
+    handleAddExperience,
+    handleDeleteExperience,
+    handleChangeExperienceDescription,
+    handleAddExperienceDescription,
+    handleDeleteExperienceDescription,
+    skills,
+    handleSkillsChange,
+    handleAddSkills,
+    handleDeleteSkills,
+  } = props;
+
+  return (
+    <div className='cv-container'>
+      <CVForm
+        handleLoadEmptyCV={handleLoadEmptyCV}
+        handleLoadExampleCV={handleLoadExampleCV}
+        personalInfo={personalInfo}
+        handleChangePersonal={handleChangePersonal}
+        education={education}
+        handleChangeEducation={handleChangeEducation}
+        handleAddEducation={handleAddEducation}
+        handleDeleteEducation={handleDeleteEducation}
+        experience={experience}
+        handleChangeExperience={handleChangeExperience}
+        handleAddExperience={handleAddExperience}
+        handleDeleteExperience={handleDeleteExperience}
+        handleChangeExperienceDescription={handleChangeExperienceDescription}
+        handleAddExperienceDescription={handleAddExperienceDescription}
+        handleDeleteExperienceDescription={handleDeleteExperienceDescription}
+        skills={skills}
+        handleSkillsChange={handleSkillsChange}
+        handleAddSkills={handleAddSkills}
+        handleDeleteSkills={handleDeleteSkills}
+      ></CVForm>
+      <CVPreview
+        personalInfo={personalInfo}
+        education={education}
+        experience={experience}
+        skills={skills}
+      ></CVPreview>
+    </div>
+  );
 }
 
 export default Main;

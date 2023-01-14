@@ -20,7 +20,7 @@ function PersonalOutput(props) {
           </div>
         </div>
       </header>
-      <span className='details-text'>{personalInfo.summary}</span>
+      <span className='details-text summary'>{personalInfo.summary}</span>
     </>
   );
 }

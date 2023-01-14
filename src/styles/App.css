@@ -77,7 +77,6 @@
   cursor: pointer;
 }
 
-/* Styling */
 #cv-form {
   border: 2px solid #01579b;
   border-radius: 5px;
@@ -276,6 +275,14 @@
 }
 
 /* ------------------------------------------------ */
+/* CV Preview (Output) Summary styling */
+/* ------------------------------------------------ */
+
+#cv-preview .summary {
+  font-size: 0.9rem;
+}
+
+/* ------------------------------------------------ */
 /* CV Preview (Output) Education styling */
 /* ------------------------------------------------ */
 
@@ -439,19 +446,34 @@ h4,
 }
 
 /* ------------------------------------------------ */
-/* Footer styling */
+/* CV Form side buttons styling */
 /* ------------------------------------------------ */
 
-.footer-container {
-  background-color: #424242;
-  color: #fff;
-  /* position: absolute; */
-  bottom: 0;
-  left: 0;
+.bottom-btn-group {
+  margin-top: 1rem;
+  position: sticky;
+  top: 20px;
+
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0.4rem;
-  font-size: 0.7rem;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bottom-btn {
+  width: 100px;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 8px;
+
+  outline: none;
+  background: none;
+
+  color: #fff;
+  background-color: #3b5998;
+  border: 1px solid #424242;
+  border: none;
+}
+
+.bottom-btn:hover {
+  cursor: pointer;
 }
