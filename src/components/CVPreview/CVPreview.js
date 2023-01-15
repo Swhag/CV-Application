@@ -11,12 +11,14 @@ function CVPreview(props) {
   const handlePrint = useReactToPrint({ content: () => componentRef.current });
   const pageStyle = `
   @page {
-    size: 157mm 222.8mm;
+    size: 157mm 222.7mm;
     margin: 0;
   }
 `;
 
   const {
+    handleLoadMyCV,
+    handleSaveCV,
     handleLoadEmptyCV,
     handleLoadExampleCV,
     personalInfo,
@@ -36,18 +38,53 @@ function CVPreview(props) {
           <SkillsOut skills={skills}></SkillsOut>
         </div>
       </div>
-      <div className='side-btn-group'>
+
+      <SideNav
+        handleLoadMyCV={handleLoadMyCV}
+        handleSaveCV={handleSaveCV}
+        handleLoadEmptyCV={handleLoadEmptyCV}
+        handleLoadExampleCV={handleLoadExampleCV}
+        handlePrint={handlePrint}
+      ></SideNav>
+    </>
+  );
+}
+
+function SideNav(props) {
+  const {
+    handleLoadMyCV,
+    handleSaveCV,
+    handleLoadEmptyCV,
+    handleLoadExampleCV,
+    handlePrint,
+  } = props;
+
+  return (
+    <div className='side-btn-group'>
+      <div className='side-btn-block'>
+        <button className='side-btn' onClick={handleLoadMyCV}>
+          My Resume
+        </button>
+
         <button className='side-btn' onClick={handleLoadEmptyCV}>
           New
         </button>
+
         <button className='side-btn' onClick={handleLoadExampleCV}>
           Load Example
         </button>
+      </div>
+
+      <div className='side-btn-block'>
+        <button className='side-btn' onClick={handleSaveCV}>
+          Save
+        </button>
+
         <button className='side-btn' onClick={handlePrint}>
           Generate PDF
         </button>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -4,29 +4,45 @@ import { v4 as uuidv4 } from 'uuid';
 import CVForm from './CVForm/CVForm';
 import CVPreview from './CVPreview/CVPreview';
 
-import myCV from './utils/myCV';
 import emptyCV from './utils/emptyCV';
 import exampleCV from './utils/exampleCV';
 
-let newEmptyCV = JSON.parse(JSON.stringify(emptyCV));
+let currentCV = JSON.parse(JSON.stringify(emptyCV));
 
 class Main extends Component {
   constructor() {
     super();
 
-    this.state = newEmptyCV;
+    this.state = currentCV;
   }
 
   // -------------------------------------------------------------------------
 
+  handleLoadMyCV = () => {
+    this.setState(currentCV);
+  };
+
+  handleSaveCV = () => {
+    if (
+      window.confirm(
+        'Do you want to overwrite "My Resume" with your current input?'
+      )
+    ) {
+      currentCV = { ...this.state };
+      this.setState(currentCV);
+    }
+  };
+
   handleLoadEmptyCV = () => {
     let newEmptyCV = JSON.parse(JSON.stringify(emptyCV));
 
-    this.setState({ ...newEmptyCV });
+    this.setState(newEmptyCV);
   };
 
   handleLoadExampleCV = () => {
-    this.setState(exampleCV);
+    let newExampleCV = JSON.parse(JSON.stringify(exampleCV));
+
+    this.setState(newExampleCV);
   };
 
   // -------------------------------------------------------------------------
@@ -235,6 +251,8 @@ class Main extends Component {
   render() {
     const { personalInfo, education, experience, skills } = this.state;
     const {
+      handleLoadMyCV,
+      handleSaveCV,
       handleLoadEmptyCV,
       handleLoadExampleCV,
       handleChangePersonal,
@@ -274,6 +292,8 @@ class Main extends Component {
           handleDeleteSkills={handleDeleteSkills}
         ></CVForm>
         <CVPreview
+          handleLoadMyCV={handleLoadMyCV}
+          handleSaveCV={handleSaveCV}
           handleLoadEmptyCV={handleLoadEmptyCV}
           handleLoadExampleCV={handleLoadExampleCV}
           personalInfo={personalInfo}
