@@ -65,21 +65,47 @@ function SideNav(props) {
 
   const [notification, setNotification] = useState('hide');
   const [message, setMessage] = useState('Loaded "My Resume"');
+  const [sameMessage, SetSameMessage] = useState(false);
+
+  function handleMessage(currentMessage) {
+    if (currentMessage === message) {
+      setNotification('hide');
+
+      SetSameMessage(!sameMessage);
+    }
+
+    setMessage(currentMessage);
+    console.log(sameMessage);
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setNotification('show');
+    }, 150);
+
+    const timer = setTimeout(() => {
+      setNotification('hide');
+    }, 3500);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [sameMessage]);
 
   useEffect(() => {
     setNotification('hide');
 
-    const timer2 = setTimeout(() => {
+    const timer1 = setTimeout(() => {
       setNotification('show');
     }, 150);
 
-    const timer3 = setTimeout(() => {
+    const timer2 = setTimeout(() => {
       setNotification('hide');
-    }, 4000);
+    }, 3500);
 
     return () => {
+      clearTimeout(timer1);
       clearTimeout(timer2);
-      clearTimeout(timer3);
     };
   }, [message]);
 
@@ -91,8 +117,9 @@ function SideNav(props) {
             className='side-btn'
             onClick={() => {
               handleLoadMyCV();
-              setMessage(`Loaded "My Resume"`);
+              // setMessage(`Loaded "My Resume"`);
               setNotification('show');
+              handleMessage(`Loaded "My Resume"`);
             }}
           >
             My Resume
@@ -102,8 +129,9 @@ function SideNav(props) {
             className='side-btn'
             onClick={() => {
               handleLoadExampleCV();
-              setMessage('Loaded Example Resume');
+              // setMessage('Loaded Example Resume');
               setNotification('show');
+              handleMessage('Loaded Example Resume');
             }}
           >
             Load Example
@@ -115,8 +143,9 @@ function SideNav(props) {
             className='side-btn'
             onClick={() => {
               handleLoadEmptyCV();
-              setMessage('Loaded New form');
+              // setMessage('Loaded New form');
               setNotification('show');
+              handleMessage('Loaded New form');
             }}
           >
             New
@@ -126,8 +155,8 @@ function SideNav(props) {
             onClick={() => {
               if (window.confirm('Do you want to overwrite "My Resume"?')) {
                 handleSaveCV();
-                setMessage(`Current input saved as "My Resume"`);
-                setNotification('show');
+                // setMessage(`Current input saved as "My Resume"`);
+                handleMessage(`Current input saved as "My Resume"`);
               }
             }}
           >
