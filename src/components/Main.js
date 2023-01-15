@@ -23,14 +23,8 @@ class Main extends Component {
   };
 
   handleSaveCV = () => {
-    if (
-      window.confirm(
-        'Do you want to overwrite "My Resume" with your current input?'
-      )
-    ) {
-      currentCV = { ...this.state };
-      this.setState(currentCV);
-    }
+    currentCV = { ...this.state };
+    this.setState(currentCV);
   };
 
   handleLoadEmptyCV = () => {

@@ -481,3 +481,29 @@ h4,
   background-color: #003069;
   cursor: pointer;
 }
+
+.notification {
+  background-color: #3b5998;
+  color: #fff;
+  font-size: 1rem;
+  position: fixed;
+  bottom: 10px;
+  right: -310px;
+  width: 300px;
+  height: 100px;
+  transition: all 200ms ease-in-out;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show {
+  transition: all 200ms ease-in-out;
+  right: 10px;
+}
+
+.hide {
+  right: -310px;
+}
