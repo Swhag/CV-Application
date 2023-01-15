@@ -83,7 +83,11 @@ function Experience(props) {
               );
             })}
 
-            <button id={exp.id} onClick={handleAddExperienceDescription}>
+            <button
+              id={exp.id}
+              className='btn-bullet'
+              onClick={handleAddExperienceDescription}
+            >
               Add Bullet Points
             </button>
 
