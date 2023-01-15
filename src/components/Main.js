@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-
 import CVForm from './CVForm/CVForm';
 import CVPreview from './CVPreview/CVPreview';
-
 import emptyCV from './utils/emptyCV';
 import exampleCV from './utils/exampleCV';
 
-let currentCV = JSON.parse(JSON.stringify(emptyCV));
+let currentCV;
 
 class Main extends Component {
   constructor() {
     super();
 
-    this.state = currentCV;
+    this.state = emptyCV;
+  }
+
+  componentDidMount() {
+    if (localStorage.getItem('myResume')) {
+      this.setState(JSON.parse(localStorage.getItem('myResume')));
+      currentCV = JSON.parse(localStorage.getItem('myResume'));
+    } else {
+      localStorage.setItem('myResume', JSON.stringify(emptyCV));
+    }
   }
 
   // -------------------------------------------------------------------------
@@ -24,6 +31,8 @@ class Main extends Component {
 
   handleSaveCV = () => {
     currentCV = { ...this.state };
+    localStorage.setItem('myResume', JSON.stringify(currentCV));
+
     this.setState(currentCV);
   };
 

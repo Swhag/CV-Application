@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import PersonalOut from './PersonalOut';
 import EducationOut from './EducationOut';
 import ExperienceOut from './ExperienceOut';
@@ -27,9 +27,6 @@ function CVPreview(props) {
     skills,
   } = props;
 
-  let [notification, setNotification] = useState('hide');
-  // let [notification, setNotification] = useState('show');
-
   return (
     <>
       <div className='cv-preview-wrapper' ref={componentRef}>
@@ -48,10 +45,11 @@ function CVPreview(props) {
         handleLoadEmptyCV={handleLoadEmptyCV}
         handleLoadExampleCV={handleLoadExampleCV}
         handlePrint={handlePrint}
-        setNotification={setNotification}
+        // notification={notification}
+        // setNotification={setNotification}
       ></SideNav>
 
-      <Notification notification={notification}></Notification>
+      {/* <Notification notification={notification}></Notification> */}
     </>
   );
 }
@@ -63,59 +61,96 @@ function SideNav(props) {
     handleLoadEmptyCV,
     handleLoadExampleCV,
     handlePrint,
-    setNotification,
   } = props;
 
+  const [notification, setNotification] = useState('hide');
+  const [message, setMessage] = useState('Loaded "My Resume"');
+
+  useEffect(() => {
+    setNotification('hide');
+
+    const timer2 = setTimeout(() => {
+      setNotification('show');
+    }, 150);
+
+    const timer3 = setTimeout(() => {
+      setNotification('hide');
+    }, 4000);
+
+    return () => {
+      clearTimeout(timer2);
+      clearTimeout(timer3);
+    };
+  }, [message]);
+
   return (
-    <div className='side-btn-group'>
-      <div className='side-btn-block'>
-        <button className='side-btn' onClick={handleLoadMyCV}>
-          My Resume
-        </button>
-
-        <button className='side-btn' onClick={handleLoadExampleCV}>
-          Load Example
-        </button>
-      </div>
-
-      <div className='side-btn-block'>
-        <button className='side-btn' onClick={handleLoadEmptyCV}>
-          New
-        </button>
-        <button
-          className='side-btn'
-          onClick={() => {
-            if (
-              window.confirm(
-                'Do you want to overwrite "My Resume" with your current input?'
-              )
-            ) {
-              handleSaveCV();
+    <>
+      <div className='side-btn-group'>
+        <div className='side-btn-block'>
+          <button
+            className='side-btn'
+            onClick={() => {
+              handleLoadMyCV();
+              setMessage(`Loaded "My Resume"`);
               setNotification('show');
-              setTimeout(() => {
-                setNotification('hide');
-              }, 4000);
-            }
-          }}
-        >
-          Save
-        </button>
+            }}
+          >
+            My Resume
+          </button>
 
-        <button className='side-btn' onClick={handlePrint}>
-          Generate PDF
-        </button>
+          <button
+            className='side-btn'
+            onClick={() => {
+              handleLoadExampleCV();
+              setMessage('Loaded Example Resume');
+              setNotification('show');
+            }}
+          >
+            Load Example
+          </button>
+        </div>
+
+        <div className='side-btn-block'>
+          <button
+            className='side-btn'
+            onClick={() => {
+              handleLoadEmptyCV();
+              setMessage('Loaded New form');
+              setNotification('show');
+            }}
+          >
+            New
+          </button>
+          <button
+            className='side-btn'
+            onClick={() => {
+              if (window.confirm('Do you want to overwrite "My Resume"?')) {
+                handleSaveCV();
+                setMessage(`Current input saved as "My Resume"`);
+                setNotification('show');
+              }
+            }}
+          >
+            Save
+          </button>
+
+          <button className='side-btn' onClick={handlePrint}>
+            Generate PDF
+          </button>
+        </div>
       </div>
-    </div>
+
+      <Notification
+        notification={notification}
+        message={message}
+      ></Notification>
+    </>
   );
 }
 
 function Notification(props) {
-  const { notification } = props;
-  return (
-    <div className={`notification ${notification}`}>
-      Current input saved as "My Resume"
-    </div>
-  );
+  const { notification, message } = props;
+  return <div className={`notification ${notification}`}>{message}</div>;
 }
 
 export default CVPreview;

@@ -15,7 +15,7 @@ const exampleCV = {
       university: 'State University of New York, New York, NY',
       program: '',
       degree: 'Bachelor of Science in Computer Science',
-      graduationDate: 'June 2020',
+      graduationDate: 'Graduated: June 2020',
       gpa: 'GPA 3.6',
     },
   ],
