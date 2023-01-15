@@ -28,7 +28,7 @@ function Personal(props) {
           name='email'
           placeholder='Email'
         />
-        <input
+        <textarea
           onChange={handleChangePersonal}
           value={personalInfo.summary}
           type='text'

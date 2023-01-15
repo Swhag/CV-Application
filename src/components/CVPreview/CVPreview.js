@@ -94,7 +94,7 @@ function SideNav(props) {
               setNotification('show');
               setTimeout(() => {
                 setNotification('hide');
-              }, 5000);
+              }, 4000);
             }
           }}
         >

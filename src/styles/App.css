@@ -116,6 +116,18 @@
   outline-color: #01579b;
 }
 
+#cv-form textarea {
+  border: 1px solid #757575;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 80px;
+  max-height: 150px;
+
+  border-radius: 3px;
+  font-size: 0.9rem;
+  padding: 5px;
+}
+
 #cv-form delete-icons i {
   position: absolute;
 }
@@ -155,6 +167,9 @@
   border-radius: 5px;
   font-size: 0.9rem;
   transition: all 150ms;
+}
+#cv-form .btn-bullet {
+  margin-top: 5px;
 }
 
 #cv-form .btn-bullet:hover {
