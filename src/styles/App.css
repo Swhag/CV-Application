@@ -500,7 +500,7 @@ h4,
   outline: none;
   border: none;
 
-  width: 100px;
+  width: 110px;
   border-radius: 5px;
   padding: 8px;
 
@@ -512,11 +512,15 @@ h4,
   cursor: pointer;
 }
 
+.side-btn:active {
+  background-color: #6d85c9;
+  transform: scale(0.97);
+}
+
 .notification {
-  background-color: #3b5998;
+  background-color: rgba(59, 89, 152, 0.9);
   color: #fff;
   font-size: 1rem;
-  opacity: 0.9;
 
   position: fixed;
   bottom: 10px;
@@ -536,3 +540,9 @@ h4,
   right: 10px;
   transition: all 200ms ease-in-out;
 }
+
+/* ------------------------------------------------ */
+
+/* ------------------------------------------------ */
+
+/* ------------------------------------------------ */

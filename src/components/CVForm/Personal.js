@@ -8,6 +8,7 @@ function Personal(props) {
       <h2>Personal Details</h2>
       <div className='group'>
         <input
+          className='effect-9'
           onChange={handleChangePersonal}
           value={personalInfo.name}
           type='text'
