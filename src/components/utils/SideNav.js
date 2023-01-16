@@ -107,6 +107,9 @@ function SideNav(props) {
           <button className='side-btn' onClick={handlePrint}>
             Generate PDF
           </button>
+          <div className='side-message'>
+            Choose Page Size & Handling option to "Fit" for 8.5 x 11 paper size.
+          </div>
         </div>
       </div>
 

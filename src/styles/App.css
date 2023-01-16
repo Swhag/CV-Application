@@ -311,9 +311,9 @@
 .cv-preview-wrapper {
   width: 595px;
   min-width: 595px;
-  height: 842px;
+  height: 770px;
 
-  padding: 50px;
+  padding: 40px;
   position: sticky;
   top: 20px;
   background-color: #fff;
@@ -616,10 +616,16 @@ h4,
   transform: scale(0.97);
 }
 
+.side-message {
+  width: 110px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
 .notification {
   background-color: rgba(0, 47, 108, 0.8);
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.1rem;
 
   position: fixed;
   bottom: 10px;
