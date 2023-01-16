@@ -5,7 +5,9 @@ function ExperienceOut(props) {
 
   return (
     <div className='experience-list'>
-      <h3>WORK EXPERIENCE</h3>
+      <div className='section-header'>
+        <h3>WORK EXPERIENCE</h3>
+      </div>
 
       {experience.map((exp, i) => {
         return (

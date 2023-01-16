@@ -5,7 +5,9 @@ function Education(props) {
 
   return (
     <div className='education-list'>
-      <h3>EDUCATION</h3>
+      <div className='section-header'>
+        <h3>EDUCATION</h3>
+      </div>
 
       {education.map((edu, i) => {
         return (

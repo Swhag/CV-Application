@@ -5,7 +5,9 @@ function SkillsOut(props) {
 
   return (
     <div className='skills-list'>
-      <h3>Skills</h3>
+      <div className='section-header'>
+        <h3>Skills</h3>
+      </div>
 
       {skills.map((skill, i) => {
         return (
