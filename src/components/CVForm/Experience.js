@@ -17,47 +17,57 @@ function Experience(props) {
       {experience.map((exp, i) => {
         return (
           <div className='group' key={exp.id}>
+            <label>Company</label>
             <input
               onChange={handleChangeExperience}
               value={exp.company}
               id={exp.id}
               type='text'
               name='company'
-              placeholder='Company'
+              placeholder=' '
             />
+
+            <label>Location</label>
             <input
               onChange={handleChangeExperience}
               value={exp.location}
               id={exp.id}
               type='text'
               name='location'
-              placeholder='location'
+              placeholder=' '
             />
+
+            <label>Position</label>
             <input
               onChange={handleChangeExperience}
               value={exp.position}
               id={exp.id}
               type='text'
               name='position'
-              placeholder='Position'
+              placeholder=' '
             />
+
+            <label>Start Date</label>
             <input
               onChange={handleChangeExperience}
               value={exp.startDate}
               id={exp.id}
               type='text'
               name='startDate'
-              placeholder='Start Date'
+              placeholder=' '
             />
+
+            <label>End Date</label>
             <input
               onChange={handleChangeExperience}
               value={exp.endDate}
               id={exp.id}
               type='text'
               name='endDate'
-              placeholder='End Date'
+              placeholder=' '
             />
 
+            <label>Description</label>
             {exp.description.map((des, index) => {
               return (
                 <div className='description-input' key={index}>

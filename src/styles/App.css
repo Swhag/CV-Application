@@ -3,8 +3,8 @@
 /* ------------------------------------------------ */
 
 .header-container {
-  height: 4rem;
-  background-color: #3b5998;
+  height: 5rem;
+  background-color: #2e334b;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +59,9 @@
 /* ------------------------------------------------ */
 
 .cv-form-wrapper {
+  border: 1px solid black;
   width: 595px;
+  background-color: #fff;
 }
 
 #cv-form input,
@@ -78,7 +80,6 @@
 }
 
 #cv-form {
-  border: 2px solid #01579b;
   border-radius: 5px;
   padding: 25px;
   display: flex;
@@ -87,15 +88,20 @@
 }
 
 #cv-form h2 {
-  font-weight: 400;
+  font-weight: 600;
   color: #01579b;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 #cv-form label {
   text-transform: capitalize;
   display: flex;
   flex-direction: column;
+
+  color: #3b5998;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 #cv-form input {
@@ -103,11 +109,12 @@
   border-radius: 3px;
   font-size: 0.9rem;
   padding: 5px;
-
   width: 100%;
+  margin-bottom: 4px;
 }
 
-#cv-form input::placeholder {
+#cv-form input::placeholder,
+#cv-form textarea::placeholder {
   text-transform: capitalize;
   color: #bdbdbd;
 }
@@ -234,6 +241,7 @@
 
   position: sticky;
   top: 20px;
+  background-color: #fff;
 }
 
 /* ------------------------------------------------ */
@@ -495,30 +503,29 @@ h4,
 }
 
 .side-btn {
+  border: 1px solid #002f6c;
+  background-color: #002f6c;
   color: #f4f4f4;
-  background-color: #3b5998;
   outline: none;
-  border: none;
 
   width: 110px;
   border-radius: 5px;
   padding: 8px;
-
   font-size: 1rem;
 }
 
 .side-btn:hover {
-  background-color: #003069;
+  background-color: #41579b;
   cursor: pointer;
 }
 
 .side-btn:active {
-  background-color: #6d85c9;
+  background-color: #060c23;
   transform: scale(0.97);
 }
 
 .notification {
-  background-color: rgba(59, 89, 152, 0.9);
+  background-color: rgba(0, 47, 108, 0.8);
   color: #fff;
   font-size: 1rem;
 
@@ -546,3 +553,71 @@ h4,
 /* ------------------------------------------------ */
 
 /* ------------------------------------------------ */
+
+.group {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.input-block {
+  position: relative;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+} /* necessary to give position: relative to parent. */
+
+.input-field {
+  border: 1px solid #757575;
+  padding: 5px;
+  width: 100%;
+  font-size: 0.9rem;
+  transition: 0.4s;
+  background: transparent;
+  outline: none;
+}
+
+.input-field ~ .focus-border:before,
+.input-field ~ .focus-border:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3399ff;
+  transition: 0.3s;
+}
+.input-field ~ .focus-border:after {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 0;
+}
+.input-field ~ .focus-border i:before,
+.input-field ~ .focus-border i:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #3399ff;
+  transition: 0.4s;
+}
+.input-field ~ .focus-border i:after {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+}
+.input-field:focus ~ .focus-border:before,
+.input-field:focus ~ .focus-border:after {
+  width: 100%;
+  transition: 0.3s;
+}
+.input-field:focus ~ .focus-border i:before,
+.input-field:focus ~ .focus-border i:after {
+  height: 100%;
+  transition: 0.4s;
+}
