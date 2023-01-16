@@ -308,9 +308,9 @@
 /* ------------------------------------------------ */
 
 .cv-preview-wrapper {
-  width: 595px;
+  /* width: 595px;
   min-width: 595px;
-  height: 770px;
+  height: 770px; */
 
   padding: 40px;
   position: sticky;
@@ -332,6 +332,18 @@
 /* CV Preview (Output) Header styling */
 /* ------------------------------------------------ */
 
+.cv-preview-wrapper {
+  padding: 0px;
+  margin: 0px;
+  min-width: none;
+  width: 8.5in;
+  min-width: 8.5in;
+  height: 11in;
+
+  transform: scale(0.85);
+  transform-origin: top left;
+}
+
 #cv-preview {
   width: 100%;
   display: flex;
@@ -339,6 +351,13 @@
   align-items: flex-start;
   gap: 10px;
   top: 0px;
+}
+
+#cv-preview {
+  width: 100%;
+  height: 100%;
+  padding: 80px;
+  gap: 20px;
 }
 
 #cv-preview header {
@@ -572,7 +591,7 @@ h4,
   max-height: 842px;
 
   padding-top: 50px;
-  margin-right: -40px;
+  margin-left: -120px;
 
   display: flex;
   flex-direction: column;
@@ -650,10 +669,10 @@ h4,
 /* Mobile Support (for view only) */
 /* --------------------------------------------- */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .cv-container {
     gap: 0px;
-    padding: 10px;
+    padding: 20px;
   }
 
   .cv-form-wrapper {
@@ -666,8 +685,9 @@ h4,
 
   .cv-preview-wrapper {
     position: static;
-    margin-top: -80px;
-    transform: scale(0.65);
+    margin-top: 190px;
+    transform-origin: center;
+    transform: scale(1.2);
   }
 
   #cv-preview {
@@ -677,7 +697,7 @@ h4,
   .side-btn-group {
     width: 100%;
     margin: auto;
-    margin-top: -140px;
+    margin-top: 140px;
     position: static;
   }
 
@@ -693,5 +713,49 @@ h4,
     margin-left: 0px;
     font-weight: 600;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .cv-preview-wrapper {
+    margin-top: 100px;
+    transform: scale(1.05);
+  }
+
+  .side-btn-group {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-preview-wrapper {
+    margin-top: 0px;
+    transform: scale(0.9);
+  }
+
+  .side-btn-group {
+    margin-top: -60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cv-preview-wrapper {
+    margin-top: -240px;
+    transform: scale(0.45);
+  }
+
+  .side-btn-group {
+    margin-top: -300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cv-preview-wrapper {
+    margin-top: -260px;
+    transform: scale(0.42);
+  }
+
+  .side-btn-group {
+    margin-top: -310px;
   }
 }

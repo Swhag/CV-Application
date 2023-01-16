@@ -24,6 +24,8 @@ function CVPreview(props) {
   const pageStyle = `
   @page {
     size: 157mm 203.7mm;
+    size: 8.5in 11in;
+
     margin: 0;
     border: none;
     box-shadow: none;
@@ -32,9 +34,9 @@ function CVPreview(props) {
 
   return (
     <>
-      <div className='cv-preview-wrapper' ref={componentRef}>
+      <div className='cv-preview-wrapper'>
         <style>{pageStyle}</style>
-        <div id='cv-preview'>
+        <div id='cv-preview' ref={componentRef}>
           <PersonalOut personalInfo={personalInfo}></PersonalOut>
           <EducationOut education={education}></EducationOut>
           <ExperienceOut experience={experience}></ExperienceOut>
