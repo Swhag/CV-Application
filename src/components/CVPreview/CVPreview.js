@@ -23,7 +23,6 @@ function CVPreview(props) {
   const handlePrint = useReactToPrint({ content: () => componentRef.current });
   const pageStyle = `
   @page {
-    size: 157mm 203.7mm;
     size: 8.5in 11in;
 
     margin: 0;
