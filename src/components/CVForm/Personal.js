@@ -8,31 +8,49 @@ function Personal(props) {
       <h2>Personal Details</h2>
       <div className='group'>
         <label>Name</label>
-        <input
-          onChange={handleChangePersonal}
-          value={personalInfo.name}
-          type='text'
-          name='name'
-          placeholder=' '
-        />
+        <div className='input-block'>
+          <input
+            className='input-field'
+            onChange={handleChangePersonal}
+            value={personalInfo.name}
+            type='text'
+            name='name'
+            placeholder=' '
+          />
+          <span className='focus-border'>
+            <i></i>
+          </span>
+        </div>
 
         <label>Phone Number</label>
-        <input
-          onChange={handleChangePersonal}
-          value={personalInfo.phone}
-          type='text'
-          name='phone'
-          placeholder=' '
-        />
+        <div className='input-block'>
+          <input
+            className='input-field'
+            onChange={handleChangePersonal}
+            value={personalInfo.phone}
+            type='text'
+            name='phone'
+            placeholder=' '
+          />
+          <span className='focus-border'>
+            <i></i>
+          </span>
+        </div>
 
         <label>Email</label>
-        <input
-          onChange={handleChangePersonal}
-          value={personalInfo.email}
-          type='text'
-          name='email'
-          placeholder=' '
-        />
+        <div className='input-block'>
+          <input
+            className='input-field'
+            onChange={handleChangePersonal}
+            value={personalInfo.email}
+            type='text'
+            name='email'
+            placeholder=' '
+          />
+          <span className='focus-border'>
+            <i></i>
+          </span>
+        </div>
 
         <label>Summary</label>
         <textarea
@@ -42,14 +60,6 @@ function Personal(props) {
           name='summary'
           placeholder=' '
         />
-      </div>
-
-      <div className='group'>
-        <input className='input-field' type='text' placeholder='First Name' />
-        {/* <label>First Name</label> */}
-        <span className='focus-border'>
-          <i></i>
-        </span>
       </div>
     </section>
   );

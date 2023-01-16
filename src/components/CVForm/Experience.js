@@ -18,60 +18,91 @@ function Experience(props) {
         return (
           <div className='group' key={exp.id}>
             <label>Company</label>
-            <input
-              onChange={handleChangeExperience}
-              value={exp.company}
-              id={exp.id}
-              type='text'
-              name='company'
-              placeholder=' '
-            />
+            <div className='input-block'>
+              <input
+                className='input-field'
+                onChange={handleChangeExperience}
+                value={exp.company}
+                id={exp.id}
+                type='text'
+                name='company'
+                placeholder=' '
+              />
+              <span className='focus-border'>
+                <i></i>
+              </span>
+            </div>
 
             <label>Location</label>
-            <input
-              onChange={handleChangeExperience}
-              value={exp.location}
-              id={exp.id}
-              type='text'
-              name='location'
-              placeholder=' '
-            />
+            <div className='input-block'>
+              <input
+                className='input-field'
+                onChange={handleChangeExperience}
+                value={exp.location}
+                id={exp.id}
+                type='text'
+                name='location'
+                placeholder=' '
+              />
+              <span className='focus-border'>
+                <i></i>
+              </span>
+            </div>
 
             <label>Position</label>
-            <input
-              onChange={handleChangeExperience}
-              value={exp.position}
-              id={exp.id}
-              type='text'
-              name='position'
-              placeholder=' '
-            />
+            <div className='input-block'>
+              <input
+                className='input-field'
+                onChange={handleChangeExperience}
+                value={exp.position}
+                id={exp.id}
+                type='text'
+                name='position'
+                placeholder=' '
+              />
+              <span className='focus-border'>
+                <i></i>
+              </span>
+            </div>
 
             <label>Start Date</label>
-            <input
-              onChange={handleChangeExperience}
-              value={exp.startDate}
-              id={exp.id}
-              type='text'
-              name='startDate'
-              placeholder=' '
-            />
+            <div className='input-block'>
+              <input
+                className='input-field'
+                onChange={handleChangeExperience}
+                value={exp.startDate}
+                id={exp.id}
+                type='text'
+                name='startDate'
+                placeholder=' '
+              />
+              <span className='focus-border'>
+                <i></i>
+              </span>
+            </div>
 
             <label>End Date</label>
-            <input
-              onChange={handleChangeExperience}
-              value={exp.endDate}
-              id={exp.id}
-              type='text'
-              name='endDate'
-              placeholder=' '
-            />
+            <div className='input-block'>
+              <input
+                className='input-field'
+                onChange={handleChangeExperience}
+                value={exp.endDate}
+                id={exp.id}
+                type='text'
+                name='endDate'
+                placeholder=' '
+              />
+              <span className='focus-border'>
+                <i></i>
+              </span>
+            </div>
 
             <label>Description</label>
             {exp.description.map((des, index) => {
               return (
                 <div className='description-input' key={index}>
-                  <input
+                  <textarea
+                    className='experience-description'
                     onChange={handleChangeExperienceDescription}
                     value={des}
                     id={exp.id}

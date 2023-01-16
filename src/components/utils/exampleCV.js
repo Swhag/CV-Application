@@ -30,7 +30,7 @@ const exampleCV = {
       endDate: 'Current',
       description: [
         'Migrated multi-page user experience into a single page app, improving customer engagement by 10%',
-        'Architected product tours with React for a new feature that improfved customer adoption by 20%',
+        'Architected product tours with React for a new feature that improved customer adoption by 20%',
         'Partnered with data science to develop the front end for a product recommendation engine that increased user time on page by 5 minutes',
       ],
     },
@@ -42,9 +42,9 @@ const exampleCV = {
       startDate: 'July 2020',
       endDate: 'August 2021',
       description: [
-        'Overhauld the UI for internal tool to refund customers which improved refund service speed by 10%.',
+        'Overhauled the UI for internal tool to refund customers which improved refund service speed by 10%.',
         'Cooperated with other developers to implement RESTFUL APIs in Django increased reporting speed by 20% by the analytical team',
-        'Used Selenium to build unit testing infrastructure for a client applcation and reduced the number of reported bugs by 8% monthly',
+        'Used Selenium to build unit testing infrastructure for a client application and reduced the number of reported bugs by 8% monthly',
       ],
     },
   ],

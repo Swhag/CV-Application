@@ -11,17 +11,24 @@ function SkillsField(props) {
         return (
           <div className='group' key={skill.id}>
             <label>Skill Name</label>
-            <input
-              onChange={handleSkillsChange}
-              value={skill.name}
-              id={skill.id}
-              type='text'
-              name='name'
-              placeholder=' '
-            />
+            <div className='input-block'>
+              <input
+                className='input-field'
+                onChange={handleSkillsChange}
+                value={skill.name}
+                id={skill.id}
+                type='text'
+                name='name'
+                placeholder=' '
+              />
+              <span className='focus-border'>
+                <i></i>
+              </span>
+            </div>
 
             <label>Skills</label>
-            <input
+            <textarea
+              className='experience-description'
               onChange={handleSkillsChange}
               value={skill.lists}
               id={skill.id}

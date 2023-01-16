@@ -15,54 +15,84 @@ function Education(props) {
         return (
           <div className='group' key={edu.id}>
             <label>University</label>
-            <input
-              onChange={handleChangeEducation}
-              value={edu.university}
-              id={edu.id}
-              type='text'
-              name='university'
-              placeholder=' '
-            />
+            <div className='input-block'>
+              <input
+                className='input-field'
+                onChange={handleChangeEducation}
+                value={edu.university}
+                id={edu.id}
+                type='text'
+                name='university'
+                placeholder=' '
+              />
+              <span className='focus-border'>
+                <i></i>
+              </span>
+            </div>
 
             <label>School Program (Optional)</label>
-            <input
-              onChange={handleChangeEducation}
-              value={edu.program}
-              id={edu.id}
-              type='text'
-              name='program'
-              placeholder=' '
-            />
+            <div className='input-block'>
+              <input
+                className='input-field'
+                onChange={handleChangeEducation}
+                value={edu.program}
+                id={edu.id}
+                type='text'
+                name='program'
+                placeholder=' '
+              />
+              <span className='focus-border'>
+                <i></i>
+              </span>
+            </div>
 
             <label>Degree</label>
-            <input
-              onChange={handleChangeEducation}
-              value={edu.degree}
-              id={edu.id}
-              type='text'
-              name='degree'
-              placeholder=' '
-            />
+            <div className='input-block'>
+              <input
+                className='input-field'
+                onChange={handleChangeEducation}
+                value={edu.degree}
+                id={edu.id}
+                type='text'
+                name='degree'
+                placeholder=' '
+              />
+              <span className='focus-border'>
+                <i></i>
+              </span>
+            </div>
 
             <label>Graduation Date</label>
-            <input
-              onChange={handleChangeEducation}
-              value={edu.graduationDate}
-              id={edu.id}
-              type='text'
-              name='graduationDate'
-              placeholder=' '
-            />
+            <div className='input-block'>
+              <input
+                className='input-field'
+                onChange={handleChangeEducation}
+                value={edu.graduationDate}
+                id={edu.id}
+                type='text'
+                name='graduationDate'
+                placeholder=' '
+              />
+              <span className='focus-border'>
+                <i></i>
+              </span>
+            </div>
 
             <label>GPA</label>
-            <input
-              onChange={handleChangeEducation}
-              value={edu.gpa}
-              id={edu.id}
-              type='text'
-              name='gpa'
-              placeholder=' '
-            />
+            <div className='input-block'>
+              <input
+                className='input-field'
+                onChange={handleChangeEducation}
+                value={edu.gpa}
+                id={edu.id}
+                type='text'
+                name='gpa'
+                placeholder=' '
+              />
+              <span className='focus-border'>
+                <i></i>
+              </span>
+            </div>
 
             <div className='btn-group'>
               <button className='btn-add' onClick={handleAddEducation}>
