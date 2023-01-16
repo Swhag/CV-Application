@@ -319,7 +319,6 @@
   background-color: #fff;
 
   outline: none;
-  border-radius: 2px;
   border: 1px solid black;
   box-shadow: 5px 0 6px 0 hsl(0 0% 0% / 0.2);
 }
@@ -617,7 +616,8 @@ h4,
 }
 
 .side-message {
-  width: 110px;
+  width: 160px;
+  margin-left: -10px;
   font-weight: 600;
   font-size: 1.1rem;
 }
