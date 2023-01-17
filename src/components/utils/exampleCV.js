@@ -31,7 +31,7 @@ const exampleCV = {
       description: [
         'Migrated multi-page user experience into a single page app, improving customer engagement by 10%.',
         'Architected product tours with React for a new feature that improved customer adoption by 20%.',
-        'Partnered with data science to develop the front end for a product recommendation engine that increased user time on page by 5 minutes.',
+        'Partnered with data analytics team to develop the front end for a product recommendation engine that increased user time on page by 5 minutes.',
         'Create non-technical descriptions of operations and workflow to enable non-coding team to function with minimal interruption.',
       ],
     },
