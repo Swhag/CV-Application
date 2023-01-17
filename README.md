@@ -21,7 +21,7 @@ Resume-Builder Web Application with minimalist design.
 
 ### Tools
 
-- [react-to-print](https://www.npmjs.com/package/react-to-print)
+- [React-to-print](https://www.npmjs.com/package/react-to-print)
 - [uuid](https://www.npmjs.com/package/uuid)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
