@@ -683,6 +683,7 @@ h4,
     margin: auto;
     margin-top: 140px;
     position: static;
+    padding-bottom: 16px;
   }
 
   .side-btn {
