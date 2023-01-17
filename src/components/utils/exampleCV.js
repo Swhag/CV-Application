@@ -6,7 +6,7 @@ const exampleCV = {
     phone: '262-941-6330',
     email: 'John.Doe@exmaple.com',
     summary:
-      'Front End developer with 2+ years of experience working with JavaScript/HTML/CSS to deliver exceptional customer experiences. Adept at contributing to a highly collaborative work environment, finding solutions and determining customer satisfaction.',
+      'Front End developer with 3+ years of experience working with JavaScript/HTML/CSS to deliver exceptional customer experiences. Adept at contributing to a highly collaborative work environment, finding solutions and determining customer satisfaction.',
   },
 
   education: [
