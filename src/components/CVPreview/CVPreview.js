@@ -24,7 +24,6 @@ function CVPreview(props) {
   const pageStyle = `
   @page {
     size: 8.5in 11in;
-
     margin: 0;
     border: none;
     box-shadow: none;

@@ -488,7 +488,7 @@ h4,
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 14px;
 }
 
 #cv-preview .experience {
