@@ -1,4 +1,4 @@
-# Simple E-Commerce Web Application
+# Resume-Builder Web Application
 
 ## Project Overview
 
