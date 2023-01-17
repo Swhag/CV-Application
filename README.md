@@ -8,7 +8,7 @@ Resume-Builder Web Application with minimalist design.
 
 ### Features
 
-- Real-time rendering of Resume Input and Output with State management
+- Real-time rendering of Resume Input and Output using State management
 - Generate PDF (targets CV preview component only)
 - Clean user interface with smooth animations (vanilla CSS)
 - Responsive design (mobile friendly UI)
