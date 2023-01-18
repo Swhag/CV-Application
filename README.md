@@ -30,3 +30,4 @@ Click Here: [Live Demo](https://swhag.github.io/Resume-Builder-App/) :point_left
 
 https://user-images.githubusercontent.com/109196962/212795551-5f0f32ca-33c7-4ebe-9bb0-fb281144dcc1.mp4
 
+
