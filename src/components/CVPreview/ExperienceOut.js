@@ -10,7 +10,7 @@ function ExperienceOut(props) {
       </div>
 
       {experience.map((exp, i) => {
-        return (
+        return exp.company !== '' || exp.location !== '' ? (
           <div className='experience' key={exp.id}>
             <div className='experience-heading'>
               <h4>{exp.company}</h4>
@@ -32,10 +32,30 @@ function ExperienceOut(props) {
               })}
             </ul>
           </div>
+        ) : (
+          // This will be rendered instead if company and location value is empty to add different roles or positions (same company)
+          <div className='experience' key={exp.id}>
+            <div className='experience-info'>
+              <div>{exp.position}</div>
+
+              <div className='experience-details'>
+                <span className='bold'>
+                  {exp.startDate} – {exp.endDate}
+                </span>
+              </div>
+            </div>
+            <ul className='experience-description'>
+              {exp.description.map((des, index) => {
+                return <li key={index}>{des}</li>;
+              })}
+            </ul>
+          </div>
         );
       })}
     </div>
   );
 }
+
+// --------------------------------
 
 export default ExperienceOut;
