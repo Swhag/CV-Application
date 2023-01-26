@@ -358,6 +358,17 @@
   padding-bottom: 6px;
 }
 
+/* Second version (without border-bottom) */
+/* #cv-preview header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none;
+  padding-bottom: 0px;
+} */
+
 #cv-preview h1 {
   color: var(--dark-green);
   text-transform: uppercase;
