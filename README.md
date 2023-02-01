@@ -4,7 +4,8 @@
 
 ### Description
 
-Resume-Builder Web Application with minimalist design. Built using ReactJS, React-to-print, UUID library and CSS.
+Resume-Builder Web Application with minimalist design.<br>
+Built using ReactJS, React-to-print, UUID library and CSS.
 
 ### Features
 
