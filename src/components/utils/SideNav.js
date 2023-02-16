@@ -22,7 +22,7 @@ function SideNav(props) {
     setMessage(currentMessage);
   }
 
-  useEffect(() => {
+  function showNotification() {
     setNotification('hide');
 
     setTimeout(() => {
@@ -31,28 +31,16 @@ function SideNav(props) {
 
     const timer = setTimeout(() => {
       setNotification('hide');
-    }, 3500);
+    }, 4000);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [refreshTimer]);
+  }
 
   useEffect(() => {
-    setNotification('hide');
-
-    setTimeout(() => {
-      setNotification('show');
-    }, 150);
-
-    const timer = setTimeout(() => {
-      setNotification('hide');
-    }, 3500);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [message]);
+    return showNotification();
+  }, [refreshTimer, message]);
 
   return (
     <>
