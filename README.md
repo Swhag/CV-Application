@@ -4,8 +4,9 @@
 
 ### Description
 
-Resume-Builder Web Application with minimalist design.<br>
-Built using ReactJS, React-to-print, UUID library and CSS.
+A minimalist Resume-Builder web application that allows users to load
+and save different states of input values and export the output as a
+PDF file. Built with React, React-to-print, UUID library, and CSS.
 
 ### Features
 
