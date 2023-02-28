@@ -1,5 +1,7 @@
 # Resume-Builder Web Application
 
+Click Here: [Live Demo](https://swhag.github.io/Resume-Builder-App/) :point_left:
+
 ## Project Overview
 
 ### Description
@@ -27,7 +29,5 @@ PDF file. Built with React, React-to-print, UUID library, and CSS.
 - [uuid](https://www.npmjs.com/package/uuid)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
-
-Click Here: [Live Demo](https://swhag.github.io/Resume-Builder-App/) :point_left:
 
 https://user-images.githubusercontent.com/109196962/212795551-5f0f32ca-33c7-4ebe-9bb0-fb281144dcc1.mp4
